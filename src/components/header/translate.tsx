@@ -43,7 +43,7 @@ export default function Languages() {
       setActive("en");
     }
     language.changeLanguage(active);
-  }, [selected]);
+  }, [selected, localActive, language, active]);
 
   return (
     <div className="md:w-24 w-20 z-50 text-black">

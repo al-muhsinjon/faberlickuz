@@ -27,12 +27,12 @@ const ProductCard: React.FC<Props> = ({ product }) => {
         {product.price && (
           <p className="line-through text-sm text-gray-500">
             <span>{product.price}</span>
-            <span>&nbsp;so'm</span>
+            <span>&nbsp;so&apos;m</span>
           </p>
         )}
         <p className="text-base font-semibold">
           <span>{product.sales}</span>
-          <span>&nbsp;so'm</span>
+          <span>&nbsp;so&apos;m</span>
         </p>
       </div>
       <div className="flex gap-4">

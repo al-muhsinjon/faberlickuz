@@ -92,7 +92,7 @@ const Product = async ({
             <div className="space-y-1">
               <h3 className="text-xl xl:text-2xl  space-x-2 null   ">
                 <span>520 000</span>
-                <span>so'm</span>
+                <span>so&apos;m</span>
               </h3>
               <button
                 className="
@@ -103,7 +103,7 @@ const Product = async ({
           bg-main
           "
               >
-                <span className="block">Savatga qo'shish</span>
+                <span className="block">Savatga qo&apos;shish</span>
               </button>
             </div>
           </div>
