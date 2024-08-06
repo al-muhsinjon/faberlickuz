@@ -1,5 +1,87 @@
-{
-  "HomePage": {
-    "title": "Hello world!"
+[
+  {
+    "title_uz": "In at pede. Cras vulputate velit eu sem. Pellentesque ut ipsum ac mi eleifend egestas. Sed pharetra,",
+    "title_ru": "rutrum urna, nec luctus felis purus ac tellus. Suspendisse sed dolor. Fusce mi",
+    "price": 94026,
+    "sales": 2214,
+    "category": 1,
+    "image_ids": [4, 5],
+    "description_uz": "Sed auctor odio a purus. Duis elementum, dui quis accumsan convallis, ante lectus convallis est, vitae sodales nisi magna sed",
+    "description_ru": "tempus eu, ligula. Aenean euismod mauris eu elit. Nulla facilisi. Sed neque. Sed",
+    "is_available": false,
+    "sub_category": 1,
+    "brand ": 2,
+    "short_descriptions": 3
+  },
+
+  {
+    "title_uz": "Quisque libero lacus, varius et, euismod et, commodo at, libero. Morbi accumsan laoreet ipsum.",
+    "title_ru": "Integer",
+    "price": 70396,
+    "sales": 31631,
+    "category": 3,
+    "image_ids": 4,
+    "description_uz": "augue scelerisque mollis. Phasellus libero mauris, aliquam eu, accumsan sed, facilisis vitae,",
+    "description_ru": "ultrices. Vivamus rhoncus. Donec est. Nunc ullamcorper, velit in aliquet lobortis,",
+    "is_available": true,
+    "sub_category": 5,
+    "brand ": 1,
+    "short_descriptions": 2
+  },
+  {
+    "title_uz": "orci sem eget massa. Suspendisse eleifend. Cras sed leo. Cras vehicula aliquet libero. Integer in magna. Phasellus dolor",
+    "title_ru": "Donec non justo. Proin non massa non ante bibendum ullamcorper. Duis cursus, diam at pretium aliquet, metus urna convallis",
+    "price": 41953,
+    "sales": 11411,
+    "category": 4,
+    "image_ids": 7,
+    "description_uz": "lacus. Aliquam rutrum lorem ac risus. Morbi metus. Vivamus euismod",
+    "description_ru": "aliquet libero. Integer in magna. Phasellus dolor elit, pellentesque a, facilisis non, bibendum sed,",
+    "is_available": false,
+    "sub_category": 1,
+    "brand ": 3,
+    "short_descriptions": 3
+  },
+  {
+    "title_uz": "sagittis. Nullam vitae diam. Proin dolor. Nulla semper tellus id nunc interdum",
+    "title_ru": "ante dictum mi, ac mattis velit justo nec ante.",
+    "price": 46200,
+    "sales": 42517,
+    "category": 2,
+    "image_ids": 8,
+    "description_uz": "Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eget magna. Suspendisse",
+    "description_ru": "massa non ante bibendum ullamcorper. Duis cursus, diam at pretium aliquet, metus urna convallis erat, eget tincidunt dui",
+    "is_available": true,
+    "sub_category": 2,
+    "brand ": 1,
+    "short_descriptions": 3
+  },
+  {
+    "title_uz": "ac risus. Morbi metus. Vivamus euismod urna. Nullam lobortis quam a felis ullamcorper",
+    "title_ru": "tincidunt congue turpis. In condimentum. Donec at arcu. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere",
+    "price": 81389,
+    "sales": 31624,
+    "category": 5,
+    "image_ids": 8,
+    "description_uz": "Cras eget nisi dictum augue malesuada malesuada. Integer id magna et ipsum cursus vestibulum. Mauris magna. Duis",
+    "description_ru": "sed, hendrerit a, arcu. Sed et libero. Proin mi. Aliquam gravida",
+    "is_available": true,
+    "sub_category": 5,
+    "brand ": 3,
+    "short_descriptions": 4
+  },
+  {
+    "title_uz": "Praesent interdum ligula eu enim. Etiam imperdiet dictum",
+    "title_ru": "interdum. Sed",
+    "price": 54981,
+    "sales": 20569,
+    "category": 9,
+    "image_ids": 7,
+    "description_uz": "ridiculus mus. Proin vel nisl. Quisque fringilla euismod enim. Etiam gravida molestie arcu. Sed eu nibh vulputate mauris",
+    "description_ru": "turpis nec mauris blandit mattis. Cras eget nisi dictum augue malesuada malesuada. Integer",
+    "is_available": true,
+    "sub_category": 4,
+    "brand ": 2,
+    "short_descriptions": 4
   }
-}
+]

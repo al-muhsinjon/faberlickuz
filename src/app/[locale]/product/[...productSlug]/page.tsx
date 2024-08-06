@@ -41,7 +41,7 @@ const Product = async ({
             d="m1 9 4-4-4-4"
           />
         </svg>
-        <Link href="/product">Каталог</Link>
+        <Link href={`/${params.locale}/product`}>Каталог</Link>
         <svg
           className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
           aria-hidden="true"
@@ -66,7 +66,7 @@ const Product = async ({
         <div className="md:col-span-5">
           <ProductView images={product.images} />
         </div>
-        <ShortDescription />
+        <ShortDescription description={product.short_descriptions} />
         <div className="lg:col-span-3 md:col-span-5 ">
           <div className="w-full border border-mainGray rounded-lg p-3 md:p-5  bg-white space-y-3 left-0">
             <div className="flex items-center gap-1 text-[#36E3A4]  mb-5">

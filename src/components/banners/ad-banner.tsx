@@ -17,7 +17,7 @@ const AdBanner: React.FC<AdBannerProps> = ({ adBanner }) => {
     router.push("/product");
   };
   console.log("adBanner", adBanner);
-  const catalog = useCategory();  
+  const catalog = useCategory();
   const router = useRouter();
   // const api = `https://birnimajon.pythonanywhere.com/api/products-catalog?${adBanner}`;
   return (
@@ -47,11 +47,10 @@ const AdBanner: React.FC<AdBannerProps> = ({ adBanner }) => {
           }}
           className="w-full rounded-lg h-96 overflow-hidden relative cursor-pointer"
         >
-          wiybeybebeub
           <Image
             alt="ad banner"
             className="object-cover"
-            priority={false}
+            priority
             src={banner.web_image_ru}
             fill
           />

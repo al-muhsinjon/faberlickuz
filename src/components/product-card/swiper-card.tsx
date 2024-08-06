@@ -27,6 +27,7 @@ const SwiperCard: React.FC<Props> = ({ images }) => {
             className="w-full h-full relative rounded-lg overflow-hidden"
           >
             <Image
+              priority
               src={image.image}
               sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               alt="/"

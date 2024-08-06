@@ -29,6 +29,7 @@ const ProductView: React.FC<Props> = ({ images }) => {
               className="relative h-14 w-14  space-y-2 rounded-lg overflow-hidden"
             >
               <Image
+                priority
                 src={image.image}
                 alt={`Thumbnail ${image.image}`}
                 className="cursor-pointer object-cover "
@@ -66,6 +67,7 @@ const ProductView: React.FC<Props> = ({ images }) => {
       </div>
       <div className=" w-96 h-96 overflow-hidden relative rounded-lg">
         <Image
+          priority={false}
           fill
           src={mainImage.image}
           alt="Main"

@@ -26,6 +26,7 @@ const CatalogCards: React.FC<Props> = ({ mainPageCategories }) => {
              `}
           >
             <Image
+              priority
               src={photo.image}
               alt="bbeybyenyc"
               fill

@@ -8,11 +8,10 @@ import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 
 interface LanguageProps {
-  name: "en" | "uz" | "ru";
+  name:  "uz" | "ru";
 }
 
 const languages: LanguageProps[] = [
-  { name: "en" },
   { name: "uz" },
   { name: "ru" },
 ];
@@ -26,24 +25,18 @@ export default function Languages() {
   const pathname = usePathname();
   const soz = pathname.split(`${localActive}`)[1] || "";
 
-  const [active, setActive] = useState<"en" | "uz" | "ru">(
-    localActive !== "en" && localActive !== "uz" && localActive !== "ru"
-      ? "en"
-      : localActive
+  const [active, setActive] = useState<"uz" | "ru">(
+    localActive !== "uz" && localActive !== "ru" ? "uz" : localActive
   );
 
   useEffect(() => {
-    if (localActive === "en") {
-      setActive("en");
-    } else if (localActive === "uz") {
+    if (localActive === "uz") {
       setActive("uz");
-    } else if (localActive === "ru") {
-      setActive("ru");
     } else {
-      setActive("en");
+      setActive("ru");
     }
     language.changeLanguage(active);
-  }, [selected, localActive, language, active]);
+  }, [selected, language.changeLanguage, active, localActive]);
 
   return (
     <div className="md:w-24 w-20 z-50 text-black">

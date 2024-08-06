@@ -39,6 +39,7 @@ const Banner: React.FC<BannerProps> = ({ banners }) => {
           <SwiperSlide key={ind} className="rounded-lg overflow-hidden">
             <div className="relative cursor-pointer w-full h-full">
               <Image
+                priority
                 src={banner.web_image_uz}
                 className="rounded-lg object-cover"
                 fill
