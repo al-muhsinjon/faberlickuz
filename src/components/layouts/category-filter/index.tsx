@@ -30,7 +30,10 @@ const CategoryFilter: React.FC<Props> = async ({ filters, stocks }) => {
             </label>
           </div>
           {filters.map((filter) => (
-            <div className="undefined  flex items-center text-sm lg:text-base text-textColor gap-x-2">
+            <div
+              key={filter.id}
+              className="undefined  flex items-center text-sm lg:text-base text-textColor gap-x-2"
+            >
               <div className="inline-flex items-center">
                 <input
                   name="catalog"
@@ -67,7 +70,10 @@ const CategoryFilter: React.FC<Props> = async ({ filters, stocks }) => {
           </label>
         </div>
         {stocks.map((stock) => (
-          <div className="undefined  flex items-center text-sm lg:text-base text-textColor gap-x-2">
+          <div
+            key={stock.id}
+            className="undefined  flex items-center text-sm lg:text-base text-textColor gap-x-2"
+          >
             <div className="inline-flex items-center">
               <input
                 name="catalog"

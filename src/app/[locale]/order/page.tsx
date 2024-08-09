@@ -13,7 +13,7 @@ const Basket = () => {
         <div className="bg-white p-6 rounded-lg shadow-md">
           <h2 className="text-xl font-bold mb-6">Savatcha</h2>
           {basket.length === 0 ? (
-            <p className="text-gray-500">Savatcha bo'sh</p>
+            <p className="text-gray-500">Savatcha bo&apos;sh</p>
           ) : (
             <div className="space-y-4 px-6 max-h-96 overflow-y-auto">
               {basket.map((product) => (
@@ -32,7 +32,7 @@ const Basket = () => {
                         {product.title_uz}
                       </h3>
                       <p className="text-gray-500">
-                        {product.price.toLocaleString()} so'm
+                        {product.price.toLocaleString()} so&apos;m
                       </p>
                     </div>
                   </div>
@@ -83,7 +83,7 @@ const Basket = () => {
             Jami {basket.length} tovar narxi
           </span>
           <span className="text-xl font-bold text-gray-800">
-            {allPrice.toLocaleString()} so'm
+            {allPrice.toLocaleString()} so&apos;m
           </span>
         </div>
         <button className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold shadow-md hover:bg-blue-700">
