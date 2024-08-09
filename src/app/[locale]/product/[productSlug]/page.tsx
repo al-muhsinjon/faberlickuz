@@ -18,7 +18,7 @@ const Product = async ({
   params: { productSlug: string; locale: string };
 }) => {
   const productFetch = await fetch(
-    `https://birnimajon.pythonanywhere.com/api/products/${params.productSlug}`
+    `${process.env.NEXT_API}/products/${params.productSlug}`
   );
   const product: IProduct = await productFetch.json();
   console.log(product);
@@ -35,9 +35,9 @@ const Product = async ({
         >
           <path
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             d="m1 9 4-4-4-4"
           />
         </svg>
@@ -51,9 +51,9 @@ const Product = async ({
         >
           <path
             stroke="currentColor"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            stroke-width="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth="2"
             d="m1 9 4-4-4-4"
           />
         </svg>
@@ -84,7 +84,7 @@ const Product = async ({
                 <path
                   fill-rule="evenodd"
                   d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
-                  clip-rule="evenodd"
+                  clipRule="evenodd"
                 ></path>
               </svg>
               <p>Mavjud</p>

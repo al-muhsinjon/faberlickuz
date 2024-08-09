@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Accordion = ({ children, title }: Props) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(true);
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };

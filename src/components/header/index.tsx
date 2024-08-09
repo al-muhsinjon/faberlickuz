@@ -12,6 +12,7 @@ import CatalogDrawer from "../drawers/catalog-drawer";
 
 const Header = () => {
   const { onOpen, onClose, isOpen } = useCatalog();
+
   return (
     <>
       <header className="relative">

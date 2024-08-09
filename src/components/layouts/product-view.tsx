@@ -21,18 +21,18 @@ const ProductView: React.FC<Props> = ({ images }) => {
   return (
     <div className=" w-full aspect-[16/11]  h-full relative flex gap-5 md:gap-[10px]  ">
       <div className="">
-        <div className="w-full h-[13rem] bg-red-300 flex gap-3 flex-col ">
+        <div className="w-full h-[13rem] flex gap-3 flex-col ">
           {images.map((image) => (
             <div
               key={image.id}
               onClick={() => handleThumbnailClick(image)}
-              className="relative h-14 w-14  space-y-2 rounded-lg overflow-hidden"
+              className="relative h-14 w-14 border space-y-2 rounded-lg overflow-hidden"
             >
               <Image
                 priority
                 src={image.image}
                 alt={`Thumbnail ${image.image}`}
-                className="cursor-pointer object-cover "
+                className="cursor-pointer  object-cover "
                 fill
               />
             </div>
@@ -65,7 +65,7 @@ const ProductView: React.FC<Props> = ({ images }) => {
           ))}
         </Swiper> */}
       </div>
-      <div className=" w-96 h-96 overflow-hidden relative rounded-lg">
+      <div className=" w-96 h-96 overflow-hidden border relative rounded-lg">
         <Image
           priority={false}
           fill

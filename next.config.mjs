@@ -4,6 +4,9 @@ const withNextIntl = createNextIntlPlugin();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  env: {
+    NEXT_API: process.env.NEXT_API,
+  },
   images: {
     remotePatterns: [
       {

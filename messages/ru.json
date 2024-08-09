@@ -1,5 +1,1098 @@
 {
-  "HomePage": {
-    "title": "Privet world!"
-  }
+  "id": 59,
+  "title_uz": "Yesido C161 Rolikli Xotira Qulflash Braketi Avtomobil ushlagichi",
+  "title_ru": "Автомобильный держатель с роликовым замком Yesido C161",
+  "price": 80000,
+  "sales": null,
+  "categories": {
+    "id": 2,
+    "title_uz": "Boshqa jihozlar",
+    "title_ru": "Другие"
+  },
+  "stock": null,
+  "images": [
+    {
+      "id": 171,
+      "image": "https://sirius-tech.uz/media/images/bda2cd22-5736-48ac-9a58-dcad7b54cf09.webp"
+    },
+    {
+      "id": 172,
+      "image": "https://sirius-tech.uz/media/images/258ed12b-a2f7-4095-b1b3-e2b0d2d7455c.webp"
+    },
+    {
+      "id": 173,
+      "image": "https://sirius-tech.uz/media/images/2d890e18-5aa7-4080-8da0-f89cc1ba07b0.webp"
+    }
+  ],
+  "description_uz": "Mobil qurilma ushlagichi GPS yo'nalishlariga amal qilishni osonlashtiradi\ntelefonda gaplashish.\nQulflash va bo'shatish funksiyasidan foydalangan holda ko'pchilik avtomobil havo teshiklariga ulanadi.\nOson ko'rish uchun 360 aylanishni osonlashtirgan holda qurilmani xavfsiz joyida ushlab turadi.\nKo'p qirrali dizayn ko'pchilik smartfonlar bilan mos keladi.",
+  "description_ru": "Держатель мобильного устройства позволяет легко следовать указаниям GPS.\nговорить по телефону.\nКрепится к большинству вентиляционных отверстий автомобиля с помощью функции блокировки и разблокировки.\nНадежно удерживает устройство на месте, обеспечивая вращение на 360 градусов для удобства просмотра.\nУниверсальный дизайн совместим с большинством смартфонов.",
+  "is_available": true,
+  "index_categories": null,
+  "brands": { "id": 17, "title_uz": "Yesido", "title_ru": "Yesido" },
+  "sub_categories": {
+    "id": 23,
+    "title_uz": "Mashinalar uchun",
+    "title_ru": "Для автомобиля"
+  },
+  "short_descriptions": [
+    {
+      "id": 301,
+      "key_uz": "Mahsulot nomi",
+      "key_ru": "Название товара",
+      "value_uz": "Avtomobil ushlagichi",
+      "value_ru": "Автомобильный держатель"
+    },
+    {
+      "id": 302,
+      "key_uz": "Brend",
+      "key_ru": "Бренд",
+      "value_uz": "Yesido",
+      "value_ru": "Yesido"
+    },
+    {
+      "id": 303,
+      "key_uz": "Model",
+      "key_ru": "Модель",
+      "value_uz": "C161",
+      "value_ru": "C161"
+    },
+    {
+      "id": 304,
+      "key_uz": "Material",
+      "key_ru": "Материал",
+      "value_uz": "ABC",
+      "value_ru": "АБС"
+    }
+  ],
+  "characteristics": [
+    {
+      "id": 204,
+      "key_uz": "Og'irligi",
+      "key_ru": "Масса",
+      "value_uz": "77g",
+      "value_ru": "77г"
+    },
+    {
+      "id": 205,
+      "key_uz": "Klip o'lchami",
+      "key_ru": "Размер клипа",
+      "value_uz": "9-13cm",
+      "value_ru": "9-13cм"
+    }
+  ],
+  "created_at": "2024-02-17T16:12:27.507433Z",
+  "slug": "avtomobilnyi-derzhatel-s-rolikovym-zamkom-yesido-c161",
+  "related_products": [
+    {
+      "id": 25,
+      "title_uz": "20W USB-C Quvvat Adapteri",
+      "title_ru": "20W USB-C Адаптер питания",
+      "images": [
+        {
+          "id": 69,
+          "image": "https://sirius-tech.uz/media/images/4c548b6e-9212-40da-bba3-3a849dc06c6b.jpeg"
+        },
+        {
+          "id": 70,
+          "image": "https://sirius-tech.uz/media/images/a2bb0188-a6d0-4c28-9504-7ed76a2daf44.jpeg"
+        },
+        {
+          "id": 71,
+          "image": "https://sirius-tech.uz/media/images/b05d0a5a-dc04-4ab0-b1e0-ca556f58738a.jpeg"
+        }
+      ],
+      "price": 260000,
+      "sales": null,
+      "slug": "20w-usb-c-adapter-pitaniia",
+      "short_descriptions": [
+        {
+          "id": 101,
+          "key_uz": "Mahsulot nomi",
+          "key_ru": "Название товара",
+          "value_uz": "Quvvat Adapteri",
+          "value_ru": "Адаптер питания"
+        },
+        {
+          "id": 102,
+          "key_uz": "Ulanish texnologiyasi",
+          "key_ru": "Технология подключения",
+          "value_uz": "USB",
+          "value_ru": "USB"
+        },
+        {
+          "id": 103,
+          "key_uz": "Rangi",
+          "key_ru": "Цвет",
+          "value_uz": "Oq",
+          "value_ru": "Белый"
+        },
+        {
+          "id": 104,
+          "key_uz": "Kirish kuchlanishi",
+          "key_ru": "Входное напряжение",
+          "value_uz": "220 volt",
+          "value_ru": "220 вольт"
+        }
+      ]
+    },
+    {
+      "id": 26,
+      "title_uz": "20W USB-C Quvvat Adapteri",
+      "title_ru": "Адаптер питания USB-C мощностью 20 Вт",
+      "images": [
+        {
+          "id": 72,
+          "image": "https://sirius-tech.uz/media/images/a9f80f62-3fd3-4ec2-97af-cfd757aab13e.webp"
+        },
+        {
+          "id": 73,
+          "image": "https://sirius-tech.uz/media/images/5e0992bf-f8fd-44ed-855a-c00ed7b386e1.jpg"
+        },
+        {
+          "id": 74,
+          "image": "https://sirius-tech.uz/media/images/3677010c-885d-4a28-9bee-e479f7ca0d6f.jpg"
+        }
+      ],
+      "price": 270000,
+      "sales": null,
+      "slug": "adapter-pitaniia-usb-c-moshchnostiu-20-vt",
+      "short_descriptions": [
+        {
+          "id": 105,
+          "key_uz": "Mahsulot nomi",
+          "key_ru": "Название товара",
+          "value_uz": "Quvvat Adapteri",
+          "value_ru": "Адаптер питания"
+        },
+        {
+          "id": 106,
+          "key_uz": "Ulanish texnologiyasi",
+          "key_ru": "Технология подключения",
+          "value_uz": "USB",
+          "value_ru": "USB"
+        },
+        {
+          "id": 107,
+          "key_uz": "Rangi",
+          "key_ru": "Цвет",
+          "value_uz": "Oq",
+          "value_ru": "Белый"
+        },
+        {
+          "id": 108,
+          "key_uz": "Kirish kuchlanishi",
+          "key_ru": "Входное напряжение",
+          "value_uz": "220 volt",
+          "value_ru": "220 вольт"
+        }
+      ]
+    },
+    {
+      "id": 37,
+      "title_uz": "Karaoke microphone BFK3 Fun music",
+      "title_ru": "Микрофон для караоке BFK3 Веселая музыка",
+      "images": [
+        {
+          "id": 108,
+          "image": "https://sirius-tech.uz/media/images/ddc6316b-67cc-4d92-9907-bad86487fe1a.jpg"
+        },
+        {
+          "id": 109,
+          "image": "https://sirius-tech.uz/media/images/e16a471a-9973-4f86-ae31-06d5f06cc8cb.jpg"
+        },
+        {
+          "id": 110,
+          "image": "https://sirius-tech.uz/media/images/32976731-5cf5-414e-9b49-f2a1309c631f.jpg"
+        }
+      ],
+      "price": 215000,
+      "sales": null,
+      "slug": "mikrofon-dlia-karaoke-bfk3-veselaia-muzyka",
+      "short_descriptions": [
+        {
+          "id": 172,
+          "key_uz": "Mahsulot nomi",
+          "key_ru": "Название товара",
+          "value_uz": "Karaoke microphone",
+          "value_ru": "Микрофон для караоке"
+        },
+        {
+          "id": 173,
+          "key_uz": "Brand",
+          "key_ru": "Бренд",
+          "value_uz": "BOROFONE",
+          "value_ru": "BOROFONE"
+        },
+        {
+          "id": 174,
+          "key_uz": "Model",
+          "key_ru": "Модель",
+          "value_uz": "BFK3",
+          "value_ru": "BFK3"
+        },
+        {
+          "id": 175,
+          "key_uz": "Foydalanish vaqti",
+          "key_ru": "Время использования",
+          "value_uz": "3 soat",
+          "value_ru": "3 часа"
+        },
+        {
+          "id": 176,
+          "key_uz": "Batareya quvvati",
+          "key_ru": "Емкость батареи",
+          "value_uz": "1200 mA / soat",
+          "value_ru": "1200 мАч"
+        }
+      ]
+    },
+    {
+      "id": 35,
+      "title_uz": "4 Quvvat rozetkasi",
+      "title_ru": "4 Розетка питания Auto-ID USB Порты",
+      "images": [
+        {
+          "id": 102,
+          "image": "https://sirius-tech.uz/media/images/31d0f05b-3375-4d7c-8bbe-fb733a9f7d27.webp"
+        },
+        {
+          "id": 103,
+          "image": "https://sirius-tech.uz/media/images/82e8946b-73bf-4dbb-a199-94f595429d56.webp"
+        },
+        {
+          "id": 104,
+          "image": "https://sirius-tech.uz/media/images/fcc67d28-2804-432a-a7f3-a0185b5403d3.webp"
+        }
+      ],
+      "price": 185000,
+      "sales": null,
+      "slug": "4-rozetka-pitaniia-auto-id-usb-porty",
+      "short_descriptions": [
+        {
+          "id": 157,
+          "key_uz": "Mahsulot nomi",
+          "key_ru": "Название товара",
+          "value_uz": "Quvvat rozetkasi",
+          "value_ru": "Розетка питания"
+        },
+        {
+          "id": 158,
+          "key_uz": "Brand",
+          "key_ru": "Бренд",
+          "value_uz": "LDNIO",
+          "value_ru": "LDNIO"
+        },
+        {
+          "id": 159,
+          "key_uz": "Model",
+          "key_ru": "Модель",
+          "value_uz": "SC4408",
+          "value_ru": "SC4408"
+        },
+        {
+          "id": 160,
+          "key_uz": "Zaryadlovchi turi",
+          "key_ru": "Тип зарядного устройства",
+          "value_uz": "2500 Vt PD va QC3.0",
+          "value_ru": "2500 Вт PD и QC3.0"
+        },
+        {
+          "id": 161,
+          "key_uz": "Hajmi",
+          "key_ru": "Измерение",
+          "value_uz": "380.0 x 180.0 x 60.0mm",
+          "value_ru": "380.0 x 180.0 x 60.0мм"
+        }
+      ]
+    },
+    {
+      "id": 36,
+      "title_uz": "2 AC rozetkalari Portativ kengaytmali quvvat rozetkasi SC2311",
+      "title_ru": "Портативная удлинительная розетка с 2 розетками переменного тока SC2311",
+      "images": [
+        {
+          "id": 105,
+          "image": "https://sirius-tech.uz/media/images/9eda4924-8eb2-4c47-beca-4e8d2bbb8e25.jpg"
+        },
+        {
+          "id": 106,
+          "image": "https://sirius-tech.uz/media/images/8b016e26-a20e-4cae-a658-b309323e86b9.jpg"
+        },
+        {
+          "id": 107,
+          "image": "https://sirius-tech.uz/media/images/bb920e4c-6c05-45f8-8386-78100ed2ee64.jpg"
+        }
+      ],
+      "price": 180000,
+      "sales": null,
+      "slug": "portativnaia-udlinitelnaia-rozetka-s-2-rozetkami-peremennogo-toka-sc2311",
+      "short_descriptions": [
+        {
+          "id": 167,
+          "key_uz": "Mahsulot nomi",
+          "key_ru": "Название товара",
+          "value_uz": "Portativ kengaytmali quvvat rozetkasi",
+          "value_ru": "Портативная удлинительная розетка"
+        },
+        {
+          "id": 168,
+          "key_uz": "Brend",
+          "key_ru": "Бренд",
+          "value_uz": "LDNIO",
+          "value_ru": "LDNIO"
+        },
+        {
+          "id": 169,
+          "key_uz": "Model",
+          "key_ru": "Модель",
+          "value_uz": "SC2311",
+          "value_ru": "SC2311"
+        },
+        {
+          "id": 170,
+          "key_uz": "Nominal quvvat",
+          "key_ru": "Номинальная мощность",
+          "value_uz": "2500 Vt",
+          "value_ru": "2500 Вт"
+        },
+        {
+          "id": 171,
+          "key_uz": "Tungi chiroq quvvati",
+          "key_ru": "Мощность ночной лампы",
+          "value_uz": "15*0,2 Vt/LED",
+          "value_ru": "15*0,2 Вт/светодиодный"
+        }
+      ]
+    },
+    {
+      "id": 39,
+      "title_uz": "Recci Wireless Charging Ambient Lamp",
+      "title_ru": "Лампа окружающего освещения с беспроводной зарядкой Recci",
+      "images": [
+        {
+          "id": 115,
+          "image": "https://sirius-tech.uz/media/images/17ee3cec-71fc-48b7-aabe-74a4793bcfda.webp"
+        },
+        {
+          "id": 116,
+          "image": "https://sirius-tech.uz/media/images/5f91f6a3-6d31-4986-be82-d8b27891b4b6.webp"
+        },
+        {
+          "id": 117,
+          "image": "https://sirius-tech.uz/media/images/31c72764-372a-4683-9ca5-707563bdeabe.webp"
+        }
+      ],
+      "price": 400000,
+      "sales": null,
+      "slug": "lampa-okruzhaiushchego-osveshcheniia-s-besprovodnoi-zariadkoi-recci",
+      "short_descriptions": [
+        {
+          "id": 193,
+          "key_uz": "Mahsulot nomi",
+          "key_ru": "Название товара",
+          "value_uz": "Ambient Lamp",
+          "value_ru": "Лампа окружающего освещения с беспроводной зарядкой"
+        },
+        {
+          "id": 194,
+          "key_uz": "Brend",
+          "key_ru": "Бренд",
+          "value_uz": "Recci",
+          "value_ru": "Recci"
+        },
+        {
+          "id": 195,
+          "key_uz": "Model",
+          "key_ru": "Модель",
+          "value_uz": "RLS-L11",
+          "value_ru": "RLS-L11"
+        },
+        {
+          "id": 196,
+          "key_uz": "Rangi",
+          "key_ru": "Цвет",
+          "value_uz": "Oq",
+          "value_ru": "Белый"
+        },
+        {
+          "id": 197,
+          "key_uz": "Maxsus xususiyatlar",
+          "key_ru": "Особые возможности",
+          "value_uz": "Simsiz zaryadlash",
+          "value_ru": "Беспроводная зарядка"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "title_uz": "Wi-Fi Simsiz Router B17 Bvot",
+      "title_ru": "Wi-Fi роутер Bvot B17",
+      "images": [
+        {
+          "id": 128,
+          "image": "https://sirius-tech.uz/media/images/6355f19b-a017-4962-9155-34f62262ae9d.jpg"
+        }
+      ],
+      "price": 620000,
+      "sales": null,
+      "slug": "wi-fi-router-bvot-b17",
+      "short_descriptions": [
+        {
+          "id": 218,
+          "key_uz": "Mahsulot nomi",
+          "key_ru": "Название товара",
+          "value_uz": "Wi-Fi Router",
+          "value_ru": "Wi-Fi роутер"
+        },
+        {
+          "id": 219,
+          "key_uz": "Brend",
+          "key_ru": "Бренд",
+          "value_uz": "Bvot",
+          "value_ru": "Bvot"
+        },
+        {
+          "id": 220,
+          "key_uz": "Model",
+          "key_ru": "Модель",
+          "value_uz": "B17",
+          "value_ru": "B17"
+        },
+        {
+          "id": 221,
+          "key_uz": "Material",
+          "key_ru": "Материал",
+          "value_uz": "Alyuminiy qotishmasi, plastmassa",
+          "value_ru": "Алюминиевый сплав, пластик"
+        },
+        {
+          "id": 222,
+          "key_uz": "Ma'lumot uzatish tezligi",
+          "key_ru": "Скорость передачи данных",
+          "value_uz": "300Mbit/s",
+          "value_ru": "300Мбит/с"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "title_uz": "Mobil Wi-Fi 4G Lte Bvot M80",
+      "title_ru": "Mobil Wi-Fi 4G Lte Bvot M80",
+      "images": [
+        {
+          "id": 130,
+          "image": "https://sirius-tech.uz/media/images/3c920f09-19a6-400f-ad37-8aa0bdd751d4.jpg"
+        },
+        {
+          "id": 131,
+          "image": "https://sirius-tech.uz/media/images/68d5e306-efa4-4b0b-b22a-e4f27372c4b2.jpg"
+        },
+        {
+          "id": 132,
+          "image": "https://sirius-tech.uz/media/images/831330f0-9852-4a3b-ab6d-f650cfcc84e8.jpg"
+        }
+      ],
+      "price": 385000,
+      "sales": null,
+      "slug": "mobil-wi-fi-4g-lte-bvot-m80",
+      "short_descriptions": [
+        {
+          "id": 223,
+          "key_uz": "Mahsulot nomi",
+          "key_ru": "Название товара",
+          "value_uz": "Wi-Fi Mobil 4G Lte",
+          "value_ru": "Wi-Fi Mobil 4G Lte"
+        },
+        {
+          "id": 224,
+          "key_uz": "Brend",
+          "key_ru": "Бренд",
+          "value_uz": "Bvot",
+          "value_ru": "Bvot"
+        },
+        {
+          "id": 225,
+          "key_uz": "Model",
+          "key_ru": "Модель",
+          "value_uz": "M80",
+          "value_ru": "M80"
+        },
+        {
+          "id": 226,
+          "key_uz": "Ma'lumot uzatish tezligi",
+          "key_ru": "Скорость передачи данных",
+          "value_uz": "150 mbps gacha",
+          "value_ru": "до 150 Мбит/с"
+        },
+        {
+          "id": 227,
+          "key_uz": "Ulanish soni",
+          "key_ru": "Количество соединений",
+          "value_uz": "8 tagacha",
+          "value_ru": "до 8"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "title_uz": "Yesido C132 15W Magnit simsiz zaryadlovchi avtomobil ushlagichi",
+      "title_ru": "Автомобильный держатель магнитного беспроводного зарядного устройства Yesido C132 15 Вт",
+      "images": [
+        {
+          "id": 139,
+          "image": "https://sirius-tech.uz/media/images/fb7bde7a-0227-4018-b1bd-2fb29ad5e0f9.webp"
+        },
+        {
+          "id": 140,
+          "image": "https://sirius-tech.uz/media/images/958f2339-aca2-4c41-a975-d4c4752a2011.webp"
+        },
+        {
+          "id": 141,
+          "image": "https://sirius-tech.uz/media/images/b6796caa-6534-462c-8683-d1d1c01dd114.webp"
+        }
+      ],
+      "price": 320000,
+      "sales": null,
+      "slug": "avtomobilnyi-derzhatel-magnitnogo-besprovodnogo-zariadnogo-ustroistva-yesido-c132-15-vt",
+      "short_descriptions": [
+        {
+          "id": 238,
+          "key_uz": "Mahsulot nomi",
+          "key_ru": "Название товара",
+          "value_uz": "Avtomobil ushlagichi",
+          "value_ru": "Автомобильный держатель"
+        },
+        {
+          "id": 239,
+          "key_uz": "Brend",
+          "key_ru": "Бренд",
+          "value_uz": "Yesido",
+          "value_ru": "Yesido"
+        },
+        {
+          "id": 240,
+          "key_uz": "Model",
+          "key_ru": "Модель",
+          "value_uz": "C132",
+          "value_ru": "C132"
+        },
+        {
+          "id": 241,
+          "key_uz": "Chiqish",
+          "key_ru": "Выход",
+          "value_uz": "15 Vt Maks",
+          "value_ru": "15 Вт Макс."
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "title_uz": "In-car holder BH68",
+      "title_ru": "Автомобильный держатель BH68",
+      "images": [
+        {
+          "id": 144,
+          "image": "https://sirius-tech.uz/media/images/f33de335-9c32-4955-97a8-09938982c942.jpg"
+        },
+        {
+          "id": 145,
+          "image": "https://sirius-tech.uz/media/images/040e268c-eae5-43d1-a23f-9c98dcbd4f22.jpg"
+        },
+        {
+          "id": 146,
+          "image": "https://sirius-tech.uz/media/images/8b3bd105-fa63-4f4f-9b46-f6ba136f2f9c.jpg"
+        }
+      ],
+      "price": 80000,
+      "sales": null,
+      "slug": "avtomobilnyi-derzhatel-bh68",
+      "short_descriptions": [
+        {
+          "id": 247,
+          "key_uz": "Mahsulot nomi",
+          "key_ru": "Название товара",
+          "value_uz": "Avtomobil ushlagichi",
+          "value_ru": "Автомобильный держатель"
+        },
+        {
+          "id": 248,
+          "key_uz": "Brend",
+          "key_ru": "Бренд",
+          "value_uz": "BOROFONE",
+          "value_ru": "BOROFONE"
+        },
+        {
+          "id": 249,
+          "key_uz": "Model",
+          "key_ru": "Модель",
+          "value_uz": "BH68",
+          "value_ru": "BH68"
+        },
+        {
+          "id": 250,
+          "key_uz": "Material",
+          "key_ru": "Материал",
+          "value_uz": "ABS + TPU",
+          "value_ru": "АБС + ТПУ"
+        },
+        {
+          "id": 251,
+          "key_uz": "Yuk ko'taruvchi og'irlik",
+          "key_ru": "Hесущий вес",
+          "value_uz": "800g",
+          "value_ru": "800г"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "title_uz": "CA67 Sagittarius Series Stretch Magnit Avtomobil ushlagichi",
+      "title_ru": "Растягивающийся магнитный автомобильный держатель CA67 серии Sagittarius",
+      "images": [
+        {
+          "id": 142,
+          "image": "https://sirius-tech.uz/media/images/22904d45-1bfd-496e-bb02-e03fa26fcf26.jpg"
+        },
+        {
+          "id": 143,
+          "image": "https://sirius-tech.uz/media/images/4ff892e9-9454-4be3-8cb5-5761dede7107.jpg"
+        }
+      ],
+      "price": 90000,
+      "sales": null,
+      "slug": "rastiagivaiushchiisia-magnitnyi-avtomobilnyi-derzhatel-ca67-serii-sagittarius",
+      "short_descriptions": [
+        {
+          "id": 242,
+          "key_uz": "Mahsulot nomi",
+          "key_ru": "Название товара",
+          "value_uz": "Avtomobil ushlagichi",
+          "value_ru": "Автомобильный держатель"
+        },
+        {
+          "id": 243,
+          "key_uz": "Brend",
+          "key_ru": "Бренд",
+          "value_uz": "hoco",
+          "value_ru": "hoco"
+        },
+        {
+          "id": 244,
+          "key_uz": "Model",
+          "key_ru": "Модель",
+          "value_uz": "CA67",
+          "value_ru": "CA67"
+        },
+        {
+          "id": 245,
+          "key_uz": "Material",
+          "key_ru": "Материал",
+          "value_uz": "PC+ ABS + silikon",
+          "value_ru": "ПК + АБС + силикон"
+        },
+        {
+          "id": 246,
+          "key_uz": "Og'irligi",
+          "key_ru": "Масса",
+          "value_uz": "139 g",
+          "value_ru": "139 г"
+        }
+      ]
+    },
+    {
+      "id": 62,
+      "title_uz": "Yesido C150 mobil magnit telefon ushlagichi",
+      "title_ru": "Магнитный держатель для мобильного телефона Yesido C150",
+      "images": [
+        {
+          "id": 179,
+          "image": "https://sirius-tech.uz/media/images/5ec7c822-0f3d-4518-9f88-b60e9dfa746c.jpg"
+        },
+        {
+          "id": 180,
+          "image": "https://sirius-tech.uz/media/images/da3ab6d8-147c-4f00-9c0c-6881535f0130.jpg"
+        },
+        {
+          "id": 181,
+          "image": "https://sirius-tech.uz/media/images/7fc8b005-d8c6-4163-b67e-58feaec27c4d.jpg"
+        }
+      ],
+      "price": 70000,
+      "sales": null,
+      "slug": "magnitnyi-derzhatel-dlia-mobilnogo-telefona-yesido-c150",
+      "short_descriptions": [
+        {
+          "id": 318,
+          "key_uz": "Mahsulot nomi",
+          "key_ru": "Название товара",
+          "value_uz": "Avtomobil ushlagichi",
+          "value_ru": "Автомобильный держатель"
+        },
+        {
+          "id": 319,
+          "key_uz": "Brend",
+          "key_ru": "Бренд",
+          "value_uz": "yesido",
+          "value_ru": "yesido"
+        },
+        {
+          "id": 320,
+          "key_uz": "Model",
+          "key_ru": "Модель",
+          "value_uz": "C150",
+          "value_ru": "C150"
+        },
+        {
+          "id": 321,
+          "key_uz": "Material",
+          "key_ru": "Материал",
+          "value_uz": "Alyuminiy qotishmasi",
+          "value_ru": "Aлюминиевый сплав"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "title_uz": "Avtomobil ichidagi ushlagich BH49 Roller",
+      "title_ru": "Автомобильный держатель BH49 Roller",
+      "images": [
+        {
+          "id": 133,
+          "image": "https://sirius-tech.uz/media/images/d13b4b06-cc4e-4158-9033-6216b5ef5227.jpg"
+        },
+        {
+          "id": 134,
+          "image": "https://sirius-tech.uz/media/images/d6d14a70-14e2-4c66-a2df-f80b6c9413f5.jpg"
+        },
+        {
+          "id": 135,
+          "image": "https://sirius-tech.uz/media/images/5f268e5c-293e-4b1e-8a21-2f3619966f64.jpg"
+        }
+      ],
+      "price": 95000,
+      "sales": null,
+      "slug": "avtomobilnyi-derzhatel-bh49-roller",
+      "short_descriptions": [
+        {
+          "id": 228,
+          "key_uz": "Mahsulot nomi",
+          "key_ru": "Название товара",
+          "value_uz": "BH49 Rolikli orqa ko'zgu avtomobil ushlagichi",
+          "value_ru": "BH49 Автомобильный держатель"
+        },
+        {
+          "id": 229,
+          "key_uz": "Brend",
+          "key_ru": "Бренд",
+          "value_uz": "BOROFONE",
+          "value_ru": "BOROFONE"
+        },
+        {
+          "id": 230,
+          "key_uz": "Material",
+          "key_ru": "Материал",
+          "value_uz": "ABS + silikon + EVA",
+          "value_ru": "АБС + силикон + ЭВА"
+        },
+        {
+          "id": 231,
+          "key_uz": "Og'irligi",
+          "key_ru": "Масса",
+          "value_uz": "130g",
+          "value_ru": "130г"
+        },
+        {
+          "id": 232,
+          "key_uz": "O'rnatish turi",
+          "key_ru": "Тип крепления",
+          "value_uz": "avtomobil ichidagi orqa ko'zgu",
+          "value_ru": "зеркало заднего вида в автомобиле"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "title_uz": "Ish stoli planshet kompyuter ushlagichi BH24 Bright Shell",
+      "title_ru": "Настольный держатель для планшета BH24 Bright Shell",
+      "images": [
+        {
+          "id": 136,
+          "image": "https://sirius-tech.uz/media/images/1a37373c-3a2a-48a0-a6d8-c4b16be4617b.jpg"
+        },
+        {
+          "id": 137,
+          "image": "https://sirius-tech.uz/media/images/482cc6ee-04e6-487b-9575-e3ad887b5b3c.jpg"
+        },
+        {
+          "id": 138,
+          "image": "https://sirius-tech.uz/media/images/0cf26f8e-81c9-493e-b294-98e553b667c7.jpg"
+        }
+      ],
+      "price": 130000,
+      "sales": null,
+      "slug": "nastolnyi-derzhatel-dlia-plansheta-bh24-bright-shell",
+      "short_descriptions": [
+        {
+          "id": 233,
+          "key_uz": "Mahsulot nomi",
+          "key_ru": "Название товара",
+          "value_uz": "Ish stoli planshet kompyuter ushlagichi",
+          "value_ru": "Держатель для настольного планшетного компьютера"
+        },
+        {
+          "id": 234,
+          "key_uz": "Brend",
+          "key_ru": "Бренд",
+          "value_uz": "BOROFONE",
+          "value_ru": "BOROFONE"
+        },
+        {
+          "id": 235,
+          "key_uz": "Model",
+          "key_ru": "Модель",
+          "value_uz": "BH24",
+          "value_ru": "BH24"
+        },
+        {
+          "id": 236,
+          "key_uz": "Material",
+          "key_ru": "Материал",
+          "value_uz": "ABS + silikon + alyuminiy-magniy qotishmasi",
+          "value_ru": "АБС + силикон + алюминиево-магниевый сплав"
+        },
+        {
+          "id": 237,
+          "key_uz": "Hajmi",
+          "key_ru": "Размер",
+          "value_uz": "70cm",
+          "value_ru": "70cм"
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "title_uz": "Avtomobil ushlagichi Borofone BH64",
+      "title_ru": "Автомобильный держател Borofone BH64",
+      "images": [
+        {
+          "id": 165,
+          "image": "https://sirius-tech.uz/media/images/0c96029e-d7fd-446d-b08d-dad00d970d4d.jpg"
+        },
+        {
+          "id": 166,
+          "image": "https://sirius-tech.uz/media/images/ced61f63-9455-42fd-814e-8c579f84c46c.jpg"
+        },
+        {
+          "id": 167,
+          "image": "https://sirius-tech.uz/media/images/d64a972a-6d06-4506-8e69-ce0331794620.jpg"
+        }
+      ],
+      "price": 70000,
+      "sales": null,
+      "slug": "avtomobilnyi-derzhatel-borofone-bh64",
+      "short_descriptions": [
+        {
+          "id": 291,
+          "key_uz": "Mahsulot nomi",
+          "key_ru": "Название товара",
+          "value_uz": "Avtomobil ushlagichi",
+          "value_ru": "Автомобильный держател"
+        },
+        {
+          "id": 292,
+          "key_uz": "Brend",
+          "key_ru": "Бренд",
+          "value_uz": "BOROFONE",
+          "value_ru": "BOROFONE"
+        },
+        {
+          "id": 293,
+          "key_uz": "Model",
+          "key_ru": "Модель",
+          "value_uz": "BH64",
+          "value_ru": "BH64"
+        },
+        {
+          "id": 294,
+          "key_uz": "Material",
+          "key_ru": "Материал",
+          "value_uz": "ABS + silikon + alyuminiy qotishmasi",
+          "value_ru": "АБС + силикон + алюминиевый сплав"
+        },
+        {
+          "id": 295,
+          "key_uz": "Yuk ko'taruvchi og'irlik",
+          "key_ru": "Вес подшипника",
+          "value_uz": "800g",
+          "value_ru": "800г"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "title_uz": "Avtomobil ushlagichi \"CA61 Kaile\" asboblar paneli uchun magnit",
+      "title_ru": "Автомобильный держатель «CA61 Kaile» магнитный на приборную панель",
+      "images": [
+        {
+          "id": 168,
+          "image": "https://sirius-tech.uz/media/images/a20f5e74-3ac3-4216-b42f-59285623d004.jpg"
+        },
+        {
+          "id": 169,
+          "image": "https://sirius-tech.uz/media/images/1a1c4382-07a9-4159-93f8-7564829c5cc4.jpg"
+        },
+        {
+          "id": 170,
+          "image": "https://sirius-tech.uz/media/images/1b3164c0-54ab-4a8c-b6e4-d92979f15e6f.jpg"
+        }
+      ],
+      "price": 60000,
+      "sales": null,
+      "slug": "avtomobilnyi-derzhatel-ca61-kaile-magnitnyi-na-pribornuiu-panel",
+      "short_descriptions": [
+        {
+          "id": 296,
+          "key_uz": "Mahsulot nomi",
+          "key_ru": "Название товара",
+          "value_uz": "Avtomobil ushlagichi",
+          "value_ru": "Автомобильный держатель"
+        },
+        {
+          "id": 297,
+          "key_uz": "Brend",
+          "key_ru": "Бренд",
+          "value_uz": "hoco",
+          "value_ru": "hoco"
+        },
+        {
+          "id": 298,
+          "key_uz": "Model",
+          "key_ru": "Модель",
+          "value_uz": "CA61",
+          "value_ru": "CA61"
+        },
+        {
+          "id": 299,
+          "key_uz": "Material",
+          "key_ru": "Материал",
+          "value_uz": "ABS + silikon",
+          "value_ru": "АБС + силикон"
+        },
+        {
+          "id": 300,
+          "key_uz": "Yuk ko'taruvchi og'irlik",
+          "key_ru": "Hесущий вес",
+          "value_uz": "2kg",
+          "value_ru": "2кг"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "title_uz": "Avtomobil ushlagichi Yesido C138",
+      "title_ru": "Автомобильный держатель Yesido C138",
+      "images": [
+        {
+          "id": 174,
+          "image": "https://sirius-tech.uz/media/images/a7dd2a37-ab3d-4694-a89b-8ae52397b6f9.webp"
+        },
+        {
+          "id": 175,
+          "image": "https://sirius-tech.uz/media/images/274acdfb-7b63-4ce6-9248-dea96b45aaeb.webp"
+        }
+      ],
+      "price": 75000,
+      "sales": null,
+      "slug": "avtomobilnyi-derzhatel-yesido-c138",
+      "short_descriptions": [
+        {
+          "id": 305,
+          "key_uz": "Mahsulot nomi",
+          "key_ru": "Название товара",
+          "value_uz": "Avtomobil ushlagichi",
+          "value_ru": "Автомобильный держатель"
+        },
+        {
+          "id": 306,
+          "key_uz": "Brend",
+          "key_ru": "Бренд",
+          "value_uz": "Yesido",
+          "value_ru": "Yesido"
+        },
+        {
+          "id": 307,
+          "key_uz": "Model",
+          "key_ru": "Модель",
+          "value_uz": "C138",
+          "value_ru": "C138"
+        },
+        {
+          "id": 308,
+          "key_uz": "Material",
+          "key_ru": "Материал",
+          "value_uz": "ABS-plastik",
+          "value_ru": "ABS-пластик"
+        },
+        {
+          "id": 309,
+          "key_uz": "Yuk ko'taruvchi og'irlik",
+          "key_ru": "Hесущий вес",
+          "value_uz": "700 g",
+          "value_ru": "700 г"
+        }
+      ]
+    },
+    {
+      "id": 61,
+      "title_uz": "Avtomobil ushlagichi hoco CA74",
+      "title_ru": "Автомобильный держатель hoco CA74",
+      "images": [
+        {
+          "id": 176,
+          "image": "https://sirius-tech.uz/media/images/8cf7de8b-e6ca-4af7-88c7-5b9c87d3eb2a.jpg"
+        },
+        {
+          "id": 177,
+          "image": "https://sirius-tech.uz/media/images/a028e49b-764b-42f4-943e-61678832f5c8.jpg"
+        },
+        {
+          "id": 178,
+          "image": "https://sirius-tech.uz/media/images/a9585b32-0e72-4e3a-a054-e099190bba2a.jpg"
+        }
+      ],
+      "price": 60000,
+      "sales": null,
+      "slug": "avtomobilnyi-derzhatel-hoco-ca74",
+      "short_descriptions": [
+        {
+          "id": 310,
+          "key_uz": "Mahsulot nomi",
+          "key_ru": "Название товара",
+          "value_uz": "Avtomobil ushlagichi",
+          "value_ru": "Автомобильный держатель"
+        },
+        {
+          "id": 311,
+          "key_uz": "Brend",
+          "key_ru": "Бренд",
+          "value_uz": "hoco",
+          "value_ru": "hoco"
+        },
+        {
+          "id": 312,
+          "key_uz": "Model",
+          "key_ru": "Модель",
+          "value_uz": "CA74",
+          "value_ru": "CA74"
+        },
+        {
+          "id": 313,
+          "key_uz": "Material",
+          "key_ru": "Материал",
+          "value_uz": "ABS plastik + silikon + metall qotishmasi + magnit",
+          "value_ru": "ABS пластик + силикон + металлический сплав + магнит"
+        }
+      ]
+    }
+  ]
 }

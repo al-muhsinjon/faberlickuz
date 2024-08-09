@@ -5,13 +5,9 @@ import { FaFacebook, FaInstagram, FaTelegramPlane } from "react-icons/fa";
 import React from "react";
 
 const Footer = async ({ locale }: { locale: string }) => {
-  const { data } = await axios.get(
-    `https://birnimajon.pythonanywhere.com/api/about/contacts/`
-  );
+  const { data } = await axios.get(`${process.env.NEXT_API}/about/contacts/`);
 
-  const response = await axios.get(
-    `https://birnimajon.pythonanywhere.com/api/about/socials/`
-  );
+  const response = await axios.get(`${process.env.NEXT_API}/about/socials/`);
 
   const { id, address_uz, address_ru, phone_1, phone_2, email } = data;
 

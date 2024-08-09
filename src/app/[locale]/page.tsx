@@ -11,21 +11,17 @@ import Banner from "@/components/banners";
 import NewProduct from "@/components/layouts/new-product";
 
 const Home = async () => {
-  const adBannerFetch = await fetch(
-    "https://birnimajon.pythonanywhere.com/api/ad-banners/"
-  );
+  const adBannerFetch = await fetch(`${process.env.NEXT_API}/ad-banners/`);
   const adBanner: IAdBanner[] = await adBannerFetch.json();
 
   const mainPageCategoryFetch = await fetch(
-    "https://birnimajon.pythonanywhere.com/api/main-page-categories/"
+    `${process.env.NEXT_API}/main-page-categories/`
   );
 
-  const bannerFetch = await fetch(
-    "https://birnimajon.pythonanywhere.com/api/banners/"
-  );
+  const bannerFetch = await fetch(`${process.env.NEXT_API}/banners/`);
 
   const newProductFetch = await fetch(
-    "https://birnimajon.pythonanywhere.com/api/products-catalog?is_new=true"
+    `${process.env.NEXT_API}/products-catalog?is_new=true`
   );
 
   const newProduct: ICategoryProduct = await newProductFetch.json();
@@ -34,11 +30,7 @@ const Home = async () => {
   const mainPageCategory: IMainPageCategory[] =
     await mainPageCategoryFetch.json();
 
-  console.log(adBanner);
-
-
-  // https://sirius-tech.uz/backend/api/products-catalog?&category=Audio&sub_category=Airpods&page=1&page_size=8
-
+  // ${process.env.NEXT_API}/products-catalog?&category=Audio&sub_category=Airpods&page=1&page_size=8
 
   return (
     <div className="">
@@ -60,3 +52,5 @@ const Home = async () => {
 };
 
 export default Home;
+
+// https://sirius-tech.uz/backend/api/products-catalog?&brand=hoco&page=1&page_size=8

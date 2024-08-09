@@ -1,7 +1,8 @@
+"use client";
 import ProductCard from "@/components/product-card";
 import { ICategoryProduct } from "@/types";
 import { Button } from "@headlessui/react";
-import React from "react";
+import React, { useEffect } from "react";
 import { MdAddShoppingCart } from "react-icons/md";
 
 interface Props {

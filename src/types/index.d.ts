@@ -4,7 +4,15 @@ export interface ISubCategory {
   title_ru: string;
   min_price: number;
   max_price: number;
-  brands?: [string];
+  brands: IChildBrand;
+}
+
+interface IChildBrand {
+  id: number;
+  title_uz: string;
+  title_ru: string;
+  min_price: number;
+  max_price: number;
 }
 
 export interface ICategory {
@@ -16,7 +24,7 @@ export interface ICategory {
   count: number;
   min_price: number;
   max_price: number;
-  brands: [string];
+  brands: IChildBrand[];
   sub_categories?: ISubCategory[];
 }
 
@@ -26,13 +34,33 @@ export type IBanner = {
   web_image_ru: string;
   rsp_image_uz: string;
   rsp_image_ru: string;
-  is_advertisement: true;
-  category: number;
-  sub_category: number;
-  brand: number;
+  is_advertisement: boolean;
+  category: {
+    id: number;
+    sub_categories: ISubCategory;
+    title_uz: string;
+    title_ru: string;
+  };
+  sub_category: {
+    id: number;
+    title_uz: string;
+    title_ru: string;
+    category: IChildCategory;
+  };
+  brand: {
+    id: number;
+    title_uz: string;
+    title_ru: string;
+  };
   product: number;
   stock: number;
 };
+
+interface IChildCategory {
+  id: number;
+  title_uz: string;
+  title_ru: string;
+}
 
 export interface IBrands {
   id: number;
@@ -51,11 +79,7 @@ export interface IAdBanner {
   rsp_image_uz: string;
   rsp_image_ru: string;
   is_advertisement: true;
-  category: {
-    id: number;
-    title_uz: string;
-    title_ru: string;
-  };
+  category: IChildCategory;
   sub_category: ISubCategory;
   brand: IBrands;
   product: {
@@ -113,4 +137,23 @@ export interface IShortDescription {
   key_ru: string;
   value_uz: string;
   value_ru: string;
+}
+
+export interface ICartProduct {
+  id: number;
+  title_uz: string;
+  title_ru: string;
+  price: number;
+  salePrice?: number; // optional, agar mavjud bo'lsa
+  image: string;
+  count: number;
+  totalPrice: number;
+  totalSales?: number; // optional, agar mavjud bo'lsa
+}
+
+export interface IBasket {
+  basket: ICartProduct[];
+  allPrice: number;
+  allCount: number;
+  orderType: string;
 }
