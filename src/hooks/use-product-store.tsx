@@ -98,7 +98,7 @@ export const useProductStore = create<ProductState>((set) => ({
     set({ isLoading: true, error: null });
     try {
       const response = await axios.get<ICategoryProduct>(
-        `https://sirius-tech.uz/backend/api/products-catalog?${query}`
+        `${process.env.NEXT_API}/products-catalog?${query}`
       );
       set({ products: response.data, isLoading: false });
     } catch (error: any) {

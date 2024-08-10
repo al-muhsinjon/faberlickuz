@@ -2,14 +2,132 @@
 import { useBasketStore } from "@/hooks/use-basket";
 import { XIcon } from "lucide-react";
 import { useLocale } from "next-intl";
+import { useState } from "react";
 
 const Basket = () => {
   const { basket, allPrice, allCount, removeFromBasket, updateProductCount } =
     useBasketStore();
   const locale = useLocale();
 
+  // State for form visibility and form data
+  const [isFormVisible, setIsFormVisible] = useState(false);
+  const [formData, setFormData] = useState({
+    name: "",
+    phone: "",
+    address: "",
+  });
+
+  // Handle input change
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
+  };
+
+  // Handle order submission
+  const handleOrderSubmit = async () => {
+    const order = basket.map((product) => ({
+      product_id: product.id,
+      count: product.count,
+    }));
+
+    const payload = {
+      ...formData,
+      order,
+    };
+
+    try {
+      const response = await fetch("https://api.faberlick.uz/api/product-orders/", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+
+      if (!response.ok) {
+        throw new Error("Something went wrong");
+      }
+
+      const data = await response.json();
+      console.log("Order successful:", data);
+      // Reset the form and basket after successful order
+      setIsFormVisible(false);
+      setFormData({
+        name: "",
+        phone: "",
+        address: "",
+      });
+      // Clear basket if necessary
+      // clearBasket();
+    } catch (error) {
+      console.error("Order failed:", error);
+    }
+  };
+
   return (
     <div className="flex flex-col min-h-screen lg:flex-row justify-between p-4 gap-32 lg:p-12 mx-auto">
+      {/* Summary Section */}
+      <div className="lg:w-1/3 w-full bg-white p-6 rounded-lg shadow-md">
+        <h2 className="text-lg font-bold text-gray-700 mb-4">Jami</h2>
+        <div className="flex justify-between mb-6">
+          <span className="text-gray-600">
+            Jami {basket.length} tovar narxi
+          </span>
+          <span className="text-xl font-bold text-gray-800">
+            {allPrice.toLocaleString()} so&apos;m
+          </span>
+        </div>
+        <button
+          onClick={() => setIsFormVisible(!isFormVisible)}
+          className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold shadow-md hover:bg-blue-700"
+        >
+          Buyurtma berish
+        </button>
+
+        {/* Form for user details */}
+        {isFormVisible && (
+          <div className="mt-4">
+            <h3 className="text-lg font-semibold text-gray-700 mb-2">
+              Buyurtma Ma'lumotlari
+            </h3>
+            <div className="space-y-4">
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleInputChange}
+                placeholder="Ism"
+                className="w-full px-4 py-2 border rounded-lg"
+              />
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleInputChange}
+                placeholder="Telefon"
+                className="w-full px-4 py-2 border rounded-lg"
+              />
+              <input
+                type="text"
+                name="address"
+                value={formData.address}
+                onChange={handleInputChange}
+                placeholder="Manzil"
+                className="w-full px-4 py-2 border rounded-lg"
+              />
+              <button
+                onClick={handleOrderSubmit}
+                className="w-full px-6 py-3 bg-green-600 text-white rounded-lg font-semibold shadow-md hover:bg-green-700"
+              >
+                Buyurtmani Yuborish
+              </button>
+            </div>
+          </div>
+        )}
+      </div>
+
       {/* Cart Items */}
       <div className="lg:w-2/3 w-full">
         <div className="bg-white p-6 rounded-lg shadow-md">
@@ -75,22 +193,6 @@ const Basket = () => {
             </div>
           )}
         </div>
-      </div>
-
-      {/* Summary Section */}
-      <div className="lg:w-1/3 w-full bg-white p-6 mt-4 lg:mt-0 rounded-lg shadow-md">
-        <h2 className="text-lg font-bold text-gray-700 mb-4">Jami</h2>
-        <div className="flex justify-between mb-6">
-          <span className="text-gray-600">
-            Jami {basket.length} tovar narxi
-          </span>
-          <span className="text-xl font-bold text-gray-800">
-            {allPrice.toLocaleString()} so&apos;m
-          </span>
-        </div>
-        <button className="w-full px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold shadow-md hover:bg-blue-700">
-          Buyurtma berish
-        </button>
       </div>
     </div>
   );
