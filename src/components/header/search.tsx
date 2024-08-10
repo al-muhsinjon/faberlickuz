@@ -70,7 +70,7 @@ const SearchComponent: React.FC = () => {
                       alt={prod.image.image || "Product Image"}
                       fill
                       loading="lazy"
-                      objectFit="cover"
+                      style={{ objectFit: "cover" }}
                       placeholder="blur"
                       blurDataURL="/blur-image.jpg"
                       className="w-full h-full object-cover duration-200 ease-in-out scale-100 blur-0 grayscale-0"
