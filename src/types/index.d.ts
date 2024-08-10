@@ -115,6 +115,8 @@ interface IProduct {
   id: number;
   title_uz: string;
   title_ru: string;
+  description_uz: string;
+  description_ru: string;
   price: number;
   sales: number;
   brand: string;

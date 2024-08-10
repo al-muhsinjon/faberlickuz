@@ -9,7 +9,7 @@ const Basket = () => {
   const locale = useLocale();
 
   return (
-    <div className="flex flex-col lg:flex-row justify-between p-4 gap-32 lg:p-12 mx-auto">
+    <div className="flex flex-col min-h-screen lg:flex-row justify-between p-4 gap-32 lg:p-12 mx-auto">
       {/* Cart Items */}
       <div className="lg:w-2/3 w-full">
         <div className="bg-white p-6 rounded-lg shadow-md">

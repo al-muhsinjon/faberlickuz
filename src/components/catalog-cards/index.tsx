@@ -78,7 +78,7 @@ const CatalogCards: React.FC<Props> = ({ mainPageCategories }) => {
   const updateCategories = (newCategory: IMainPageCategory) => {
     setCategories({
       brand: "",
-      category: newCategory.title_uz,
+      category: `&category=${newCategory.title_uz}`,
       sub_category: "",
       stock: "",
     });
@@ -94,10 +94,10 @@ const CatalogCards: React.FC<Props> = ({ mainPageCategories }) => {
           className={`
             ring ring-white hover:ring-darkBlue/90 ring-offset-2 cursor-pointer w-full relative block rounded-lg overflow-hidden group
           min-h-[150px] sm:min-h-[240px]
-            ${ind === 0 ? "row-span-4 col-span-4 lg:col-span-4" : ""}
-            ${ind === 1 ? "row-span-2 col-span-4 lg:col-span-4" : ""}
-            ${ind === 4 ? "row-span-2 col-span-4 lg:col-span-4" : ""}
-            ${ind === 5 ? "row-span-2 col-span-4 lg:col-span-4" : ""}
+            ${ind === 0 ? " lg:row-span-4 col-span-1 lg:col-span-4" : ""}
+            ${ind === 1 ? " lg:row-span-2 col-span-1 lg:col-span-4" : ""}
+            ${ind === 4 ? " lg:row-span-2 col-span-1 lg:col-span-4" : ""}
+            ${ind === 5 ? " lg:row-span-2 col-span-1 lg:col-span-4" : ""}
             row-span-2 col-span-2
           `}
         >

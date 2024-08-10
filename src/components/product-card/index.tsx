@@ -160,12 +160,16 @@ import SwiperCard from "./swiper-card";
 import { useRouter } from "next/navigation";
 import { useLocale } from "use-intl";
 import { useBasketStore } from "@/hooks/use-basket";
+import { useTranslations } from "next-intl";
 
 interface Props {
   product: IProduct;
 }
 
 const ProductCard: React.FC<Props> = ({ product }) => {
+  const t = useTranslations("Card");
+
+  // console.log();
   const { addToBasket } = useBasketStore();
   const router = useRouter();
   const locale = useLocale();
@@ -194,15 +198,15 @@ const ProductCard: React.FC<Props> = ({ product }) => {
         {locale === "uz" ? product.title_uz : product.title_ru}
       </h2>
       <div className="flex gap-3 mb-4 text-sm">
-        {product.price && (
+        {product.sales && (
           <p className="line-through text-gray-500">
             <span>{product.price}</span>
-            <span>&nbsp;so&apos;m</span>
+            <span>&nbsp;{t("btns.sum")}</span>
           </p>
         )}
         <p className="text-base font-semibold text-main">
-          <span>{product.sales}</span>
-          <span>&nbsp;so&apos;m</span>
+          <span>{product.price}</span>
+          <span>&nbsp;{t("btns.sum")}</span>
         </p>
       </div>
       <div className="flex gap-2">
@@ -213,10 +217,10 @@ const ProductCard: React.FC<Props> = ({ product }) => {
           <MdAddShoppingCart size={20} />
         </Button>
         <Button
-          onClick={() => router.push(`${locale}/product/${product.slug}`)}
+          onClick={() => router.push(`/${locale}/product/${product.slug}`)}
           className="p-2 text-main border-main hover:text-white hover:bg-main font-semibold rounded-lg border-2 transition duration-150 ease-in-out w-full"
         >
-          Podrobne
+          {t("btns.batafsil")}
         </Button>
       </div>
     </div>

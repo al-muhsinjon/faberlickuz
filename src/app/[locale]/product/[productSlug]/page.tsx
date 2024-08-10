@@ -1,9 +1,13 @@
 import ProductView from "@/components/layouts/product-view";
 import ShortDescription from "@/components/layouts/short-description";
-import { IProduct } from "@/types";
+import { useBasketStore } from "@/hooks/use-basket";
+import { ICartProduct, IProduct } from "@/types";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
+import AddToBasket from "./add-to-basket";
+import Gravity from "./gravity";
+import Desc from "./desc";
 
 interface Props {
   params: {
@@ -21,45 +25,10 @@ const Product = async ({
     `${process.env.NEXT_API}/products/${params.productSlug}`
   );
   const product: IProduct = await productFetch.json();
+
   return (
     <div className="px-12 py-6">
-      <div className="flex flex-wrap gap-1 md:gap-2 items-center text-currentGrey font-rubik text-sm md:text-base">
-        <Link href="/">Главная</Link>
-        <svg
-          className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 6 10"
-        >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="m1 9 4-4-4-4"
-          />
-        </svg>
-        <Link href={`/${params.locale}/product`}>Каталог</Link>
-        <svg
-          className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 6 10"
-        >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="m1 9 4-4-4-4"
-          />
-        </svg>
-        <Link href={`/${params.locale}/product/${product.slug}`}>
-          {params.locale === "uz" ? product.title_uz : product.title_ru}
-        </Link>
-      </div>
+      <Gravity product={product} />
 
       <div className="grid grid-cols-1 py-12 md:grid-cols-12 lg:grid-cols-16 gap-7 lg:gap-[30px] static">
         <div className="md:col-span-5">
@@ -93,22 +62,12 @@ const Product = async ({
                 <span>{product.price || product.sales}</span>
                 <span>so&apos;m</span>
               </h3>
-              <button
-                className="
-          bg-darkBlue text-white mt-3.5 border-main 
-          hover:opacity-80 flex items-center justify-center gap-3 border
-          relative rounded-lg font-rubik md:text-lg px-4 py-2 undefined 
-          group w-full text-sm  lg:text-lg  
-          bg-main
-          "
-              >
-                <span className="block">Savatga qo&apos;shish</span>
-              </button>
+              <AddToBasket product={product} />
             </div>
           </div>
         </div>
-        <div></div>
       </div>
+      <Desc product={product} />
     </div>
   );
 };

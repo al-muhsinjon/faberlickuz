@@ -1,4 +1,6 @@
+"use client";
 import { IShortDescription } from "@/types";
+import { useTranslations } from "next-intl";
 import React from "react";
 
 interface Props {
@@ -6,9 +8,10 @@ interface Props {
 }
 
 const ShortDescription: React.FC<Props> = ({ description }) => {
+  const t  =useTranslations("Product")
   return (
     <div className="md:col-span-4 space-y-2.5  text-darkBlue">
-      <h2 className="font-medium md:text-lg">Tovar haqida qisqacha</h2>
+      <h2 className="font-medium md:text-lg">{t("qisqacha")}</h2>
       <div className="space-y-2">
         {description.map((desc) => (
           <div

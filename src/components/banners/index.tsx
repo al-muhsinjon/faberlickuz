@@ -141,7 +141,7 @@ const Banner: React.FC<BannerProps> = ({ banners }) => {
   };
 
   return (
-    <div className="mt-6 mx-auto w-full lg:w-[85%] rounded-md h-[20rem] lg:h-[30rem] relative">
+    <div className="mt-6 mx-auto w-full lg:w-full px-12 rounded-md h-[20rem] lg:h-[30rem] relative">
       <Swiper
         loop={true}
         modules={[Navigation, Autoplay]}
@@ -173,13 +173,13 @@ const Banner: React.FC<BannerProps> = ({ banners }) => {
       </Swiper>
       <Button
         ref={prevRef}
-        className="absolute top-1/2 left-2 lg:left-12 transform -translate-y-1/2 z-10 bg-main text-white rounded-full p-2"
+        className="absolute top-1/2 left-2 lg:left-24 transform -translate-y-1/2 z-10 bg-main text-white rounded-full p-2"
       >
         <ChevronLeft size={24} />
       </Button>
       <Button
         ref={nextRef}
-        className="absolute top-1/2 right-2 lg:right-12 transform -translate-y-1/2 z-10 bg-main text-white rounded-full p-2"
+        className="absolute top-1/2 right-4 lg:right-24 transform -translate-y-1/2 z-10 bg-main text-white rounded-full p-2"
       >
         <ChevronRight size={24} />
       </Button>
