@@ -67,13 +67,13 @@ const Footer = async ({ locale }: { locale: string }) => {
             © 2024 Faberlic, Inc. All rights reserved.
           </span>
           <div className="flex gap-6">
-            <Link href={response.data.instagram}>
+            <Link href={`${response.data.instagram}`}>
               <FaInstagram size={28} />
             </Link>
-            <Link href={response.data.facebook}>
+            <Link href={`${response.data.facebook}`}>
               <FaFacebook size={28} />
             </Link>
-            <Link href={response.data.telegram}>
+            <Link href={`${response.data.telegram}`}>
               <FaTelegramPlane size={28} />
             </Link>
           </div>
