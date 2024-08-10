@@ -21,7 +21,6 @@ const Product = async ({
     `${process.env.NEXT_API}/products/${params.productSlug}`
   );
   const product: IProduct = await productFetch.json();
-  console.log(product);
   return (
     <div className="px-12 py-6">
       <div className="flex flex-wrap gap-1 md:gap-2 items-center text-currentGrey font-rubik text-sm md:text-base">
@@ -58,7 +57,7 @@ const Product = async ({
           />
         </svg>
         <Link href={`/${params.locale}/product/${product.slug}`}>
-          {product.title_uz}
+          {params.locale === "uz" ? product.title_uz : product.title_ru}
         </Link>
       </div>
 
@@ -82,7 +81,7 @@ const Product = async ({
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
-                  fill-rule="evenodd"
+                  fillRule="evenodd"
                   d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z"
                   clipRule="evenodd"
                 ></path>
@@ -91,7 +90,7 @@ const Product = async ({
             </div>
             <div className="space-y-1">
               <h3 className="text-xl xl:text-2xl  space-x-2 null   ">
-                <span>520 000</span>
+                <span>{product.price || product.sales}</span>
                 <span>so&apos;m</span>
               </h3>
               <button

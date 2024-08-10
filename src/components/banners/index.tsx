@@ -116,6 +116,7 @@ import { IBanner } from "@/types";
 import { useRouter } from "next/navigation";
 import { useCategoryStore } from "@/hooks/use-category";
 import { Button } from "@headlessui/react";
+import { useLocale } from "next-intl";
 
 interface BannerProps {
   banners: IBanner[];
@@ -123,6 +124,7 @@ interface BannerProps {
 
 const Banner: React.FC<BannerProps> = ({ banners }) => {
   const { setCategories } = useCategoryStore();
+  const locale = useLocale();
   const router = useRouter();
   const prevRef = useRef<HTMLButtonElement>(null);
   const nextRef = useRef<HTMLButtonElement>(null);
@@ -156,7 +158,9 @@ const Banner: React.FC<BannerProps> = ({ banners }) => {
             <div className="relative w-full h-full">
               <Image
                 priority
-                src={banner.web_image_uz}
+                src={
+                  locale === "uz" ? banner.web_image_uz : banner.web_image_ru
+                }
                 className="rounded-lg object-cover"
                 fill
                 alt={`Banner ${ind}`}

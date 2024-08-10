@@ -61,7 +61,6 @@ const Product = () => {
     if (query) {
       fetchProducts(query);
     }
-    console.log(products);
   }, [query]);
 
   return (

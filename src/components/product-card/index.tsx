@@ -191,7 +191,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
         <SwiperCard images={product.images} />
       </div>
       <h2 className="font-bold text-base mt-4 mb-2 truncate-2-lines">
-        {product.title_uz}
+        {locale === "uz" ? product.title_uz : product.title_ru}
       </h2>
       <div className="flex gap-3 mb-4 text-sm">
         {product.price && (

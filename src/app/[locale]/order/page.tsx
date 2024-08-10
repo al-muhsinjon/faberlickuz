@@ -1,10 +1,12 @@
 "use client";
 import { useBasketStore } from "@/hooks/use-basket";
 import { XIcon } from "lucide-react";
+import { useLocale } from "next-intl";
 
 const Basket = () => {
   const { basket, allPrice, allCount, removeFromBasket, updateProductCount } =
     useBasketStore();
+  const locale = useLocale();
 
   return (
     <div className="flex flex-col lg:flex-row justify-between p-4 gap-32 lg:p-12 mx-auto">
@@ -24,16 +26,16 @@ const Basket = () => {
                   <div className="flex items-center">
                     <img
                       src={product.image}
-                      alt={product.title_uz}
+                      alt={
+                        locale === "uz" ? product.title_uz : product.title_ru
+                      }
                       className="w-16 h-16 object-cover rounded-lg"
                     />
                     <div className="ml-4 flex flex-col w-48">
                       <h3 className="text-lg font-semibold text-gray-700 line-clamp-2">
-                        {product.title_uz}
+                        {locale === "uz" ? product.title_uz : product.title_ru}
                       </h3>
-                      <p className="text-gray-500">
-                        {product.price.toLocaleString()} so&apos;m
-                      </p>
+                      <p className="text-gray-500">{product.price} so&apos;m</p>
                     </div>
                   </div>
                   <div className="flex items-center space-x-2">

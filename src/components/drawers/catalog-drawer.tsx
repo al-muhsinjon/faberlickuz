@@ -41,7 +41,6 @@ const CatalogDrawer = () => {
       sub_category: newSubCategory,
     });
     fetchProducts(newCategory + newSubCategory);
-    console.log("drawer: ", query);
     onClose();
     router.push("/uz/product");
   };

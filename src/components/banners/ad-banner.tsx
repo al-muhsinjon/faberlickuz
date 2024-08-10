@@ -56,6 +56,7 @@ import React from "react";
 import { IAdBanner } from "@/types";
 import { useRouter } from "next/navigation";
 import { useCategoryStore } from "@/hooks/use-category";
+import { useLocale } from "next-intl";
 
 interface AdBannerProps {
   adBanner: IAdBanner[];
@@ -64,6 +65,7 @@ interface AdBannerProps {
 const AdBanner: React.FC<AdBannerProps> = ({ adBanner }) => {
   const setCategories = useCategoryStore((state) => state.setCategories);
   const router = useRouter();
+  const locale = useLocale();
 
   const handleBannerClick = (banner: IAdBanner) => {
     setCategories({
@@ -87,7 +89,7 @@ const AdBanner: React.FC<AdBannerProps> = ({ adBanner }) => {
         >
           <Image
             alt="ad banner"
-            src={banner.web_image_ru}
+            src={locale === "uz" ? banner.web_image_uz : banner.web_image_ru}
             fill
             className="object-cover"
             priority

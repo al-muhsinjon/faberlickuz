@@ -1,6 +1,7 @@
 import React from "react";
 import Accordion from "./accordion";
 import { IMainPageCategory, IStoc } from "@/types";
+import { useLocale } from "next-intl";
 
 type Props = {
   filters: IMainPageCategory[];
@@ -8,6 +9,7 @@ type Props = {
 };
 
 const CategoryFilter: React.FC<Props> = async ({ filters, stocks }) => {
+  const locale = useLocale();
   return (
     <div className="border space-y-4 lg:space-y-[30px] p-4 rounded-lg max-lg:absolute z-40 top-0 left-[-100%] max-lg:h-[100vh] max-lg:w-[30vh] duration-500 bg-white false">
       <Accordion title="Katalog">
@@ -44,10 +46,10 @@ const CategoryFilter: React.FC<Props> = async ({ filters, stocks }) => {
                 />
               </div>
               <label
-                htmlFor={filter.title_uz}
+                htmlFor={locale === "uz" ? filter.title_uz : filter.title_ru}
                 className="space-y-2 cursor-pointer"
               >
-                {filter.title_uz}
+                {locale === "uz" ? filter.title_uz : filter.title_ru}
               </label>
             </div>
           ))}
@@ -60,7 +62,7 @@ const CategoryFilter: React.FC<Props> = async ({ filters, stocks }) => {
             <input
               name="catalog"
               type="radio"
-              className="w-4 h-4 border border-borderGrey rounded accent-darkBlue/80"
+              className="w-4 h-4 border border-main rounded accent-main/80"
               id="yangi"
               value="new"
             />
@@ -77,8 +79,8 @@ const CategoryFilter: React.FC<Props> = async ({ filters, stocks }) => {
             <div className="inline-flex items-center">
               <input
                 name="catalog"
-                type="radio"
-                className="w-4 h-4 border border-borderGrey rounded accent-darkBlue/80"
+                type="checkbox"
+                className="w-4 h-4 border border-main rounded accent-main/80"
                 id={stock.title_uz}
                 value="all"
               />
@@ -87,7 +89,7 @@ const CategoryFilter: React.FC<Props> = async ({ filters, stocks }) => {
               htmlFor={stock.title_uz}
               className="space-y-2 cursor-pointer"
             >
-              {stock.title_uz}
+              {locale === "uz" ? stock.title_uz : stock.title_ru}
             </label>
           </div>
         ))}

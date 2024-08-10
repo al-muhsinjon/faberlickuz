@@ -36,6 +36,9 @@
 //             ${ind === 1 ? "row-span-2 col-span-4" : ""}
 //             ${ind === 4 ? "row-span-2 col-span-4" : ""}
 //             ${ind === 5 ? "row-span-2 col-span-4" : ""}
+
+// ${ind === 0 ? "row-span-4 col-span-2 lg:col-span-4" : ""}
+// ${ind === 1 ? "row-span-2 col-span-2 lg:col-span-4" : ""}
 //             row-span-2 col-span-2
 //           `}
 //         >
@@ -61,6 +64,7 @@ import Image from "next/image";
 import { IMainPageCategory } from "@/types";
 import { useRouter } from "next/navigation";
 import { useCategoryStore } from "@/hooks/use-category";
+import { useLocale } from "next-intl";
 
 interface Props {
   mainPageCategories: IMainPageCategory[];
@@ -69,6 +73,7 @@ interface Props {
 const CatalogCards: React.FC<Props> = ({ mainPageCategories }) => {
   const router = useRouter();
   const setCategories = useCategoryStore((state) => state.setCategories);
+  const locale = useLocale();
 
   const updateCategories = (newCategory: IMainPageCategory) => {
     setCategories({
@@ -77,7 +82,7 @@ const CatalogCards: React.FC<Props> = ({ mainPageCategories }) => {
       sub_category: "",
       stock: "",
     });
-    router.push("/uz/product");
+    router.push(`/${locale}/product`);
   };
 
   return (
@@ -88,8 +93,12 @@ const CatalogCards: React.FC<Props> = ({ mainPageCategories }) => {
           onClick={() => updateCategories(photo)}
           className={`
             ring ring-white hover:ring-darkBlue/90 ring-offset-2 cursor-pointer w-full relative block rounded-lg overflow-hidden group
-            ${ind === 0 ? "row-span-4 col-span-2 lg:col-span-4" : ""}
-            ${ind === 1 ? "row-span-2 col-span-2 lg:col-span-4" : ""}
+          min-h-[150px] sm:min-h-[240px]
+            ${ind === 0 ? "row-span-4 col-span-4 lg:col-span-4" : ""}
+            ${ind === 1 ? "row-span-2 col-span-4 lg:col-span-4" : ""}
+            ${ind === 4 ? "row-span-2 col-span-4 lg:col-span-4" : ""}
+            ${ind === 5 ? "row-span-2 col-span-4 lg:col-span-4" : ""}
+            row-span-2 col-span-2
           `}
         >
           <Image
@@ -100,6 +109,10 @@ const CatalogCards: React.FC<Props> = ({ mainPageCategories }) => {
             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
             className="w-full h-full object-cover group-hover:scale-125 transition-transform duration-200"
           />
+          <div className="w-full h-full top-0 left-0 bg-black/50 absolute"></div>
+          <h1 className="absolute top-5 left-5 text-white">
+            {locale === "uz" ? photo.title_uz : photo.title_ru}
+          </h1>
         </div>
       ))}
     </div>

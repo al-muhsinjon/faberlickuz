@@ -119,6 +119,19 @@ interface IProduct {
   sales: number;
   brand: string;
   stock: IStoc;
+  images: IImage[];
+  short_descriptions: IShortDescription[];
+  slug: string;
+}
+
+interface IProductC {
+  id: number;
+  title_uz: string;
+  title_ru: string;
+  price: number;
+  sales: number;
+  brand: string;
+  stock: IStoc;
   image: IImage;
   short_descriptions: IShortDescription[];
   slug: string;
@@ -129,6 +142,13 @@ export interface ICategoryProduct {
   next: string;
   previous: string;
   results: IProduct[];
+}
+
+export interface ISearchCategoryProduct {
+  count: number;
+  next: string;
+  previous: string;
+  results: IProductC[];
 }
 
 export interface IShortDescription {

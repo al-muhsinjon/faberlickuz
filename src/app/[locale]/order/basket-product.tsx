@@ -1,4 +1,6 @@
+"use client";
 import { ICartProduct } from "@/types";
+import { useLocale } from "next-intl";
 import Image from "next/image";
 import React from "react";
 
@@ -7,6 +9,7 @@ interface Props {
 }
 
 const BasketProduct: React.FC<Props> = ({ product }) => {
+  const locale = useLocale();
   return (
     <div className="flex  items-center justify-center w-full py-4 md:py-[30px]">
       <div className="flex justify-between w-full bg-red-300 max-sm:flex-col items-center gap-2 sm:gap-0 relative py-5 sm:py-0">
@@ -21,7 +24,7 @@ const BasketProduct: React.FC<Props> = ({ product }) => {
           </div>
           <div className="space-y-2">
             <p className="line-clamp-2 text-sm md:text-lg font-semibold max-w-[150px] xl:max-w-[280px]">
-              {product.title_uz}
+              {locale === "uz" ? product.title_uz : product.title_ru}
             </p>
             <div className="relative ">
               <h4 className="lg:text-lg ">{product.price}</h4>
