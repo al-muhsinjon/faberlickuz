@@ -131,11 +131,13 @@ const Banner: React.FC<BannerProps> = ({ banners }) => {
 
   const handleBannerClick = (banner: IBanner) => {
     setCategories({
-      category: banner.category?.title_uz || "",
-      sub_category: banner.sub_category?.title_uz || "",
-      brand: banner.brand?.title_uz || "",
+      brand: banner.brand ? `&brand=${banner.brand.title_uz}` : "",
+      category: banner.category ? `&category=${banner.category.title_uz}` : "",
+      sub_category: banner.sub_category
+        ? `&sub_category=${banner.sub_category.title_uz}`
+        : "",
     });
-    router.push("/uz/product");
+    router.push(`/${locale}/product`);
   };
 
   return (

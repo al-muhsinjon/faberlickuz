@@ -9,7 +9,7 @@ interface Props {
 }
 
 const Accordion = ({ children, title }: Props) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
   const toggleAccordion = () => {
     setIsOpen(!isOpen);
   };
@@ -19,7 +19,7 @@ const Accordion = ({ children, title }: Props) => {
         className="w-full p-4 font-bold text0-main flex justify-between ease-linear"
         onClick={toggleAccordion}
       >
-        {title} {isOpen ? <ChevronDown /> : <ChevronUp />}
+        {title} {!isOpen ? <ChevronDown /> : <ChevronUp />}
       </Button>
       {isOpen && <div className="p-4 divide-y bg-white">{children}</div>}
     </div>

@@ -16,11 +16,13 @@ const ProductsPage = async ({
   const stocks: IStoc[] = await stockFetcher.json();
 
   return (
-    <div className="px-12 py-6">
-      <div className="flex flex-wrap gap-1 md:gap-2 items-center text-currentGrey font-rubik text-sm md:text-base">
-        <Link href="/">Главная</Link>
+    <div className="container mx-auto px-4 py-6">
+      <div className="flex flex-wrap gap-2 items-center text-gray-700 font-rubik text-sm md:text-base">
+        <Link href="/" className="hover:underline">
+          Главная
+        </Link>
         <svg
-          className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
+          className="w-3 h-3 text-gray-400 mx-1"
           aria-hidden="true"
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -34,26 +36,15 @@ const ProductsPage = async ({
             d="m1 9 4-4-4-4"
           />
         </svg>
-        <Link href={`/${params.locale}/product`}>Каталог</Link>
-        <svg
-          className="rtl:rotate-180 w-3 h-3 text-gray-400 mx-1"
-          aria-hidden="true"
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 6 10"
-        >
-          <path
-            stroke="currentColor"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            d="m1 9 4-4-4-4"
-          />
-        </svg>
+        <Link href={`/${params.locale}/product`} className="hover:underline">
+          Каталог
+        </Link>
       </div>
-      <div className="grid grid-cols-1 lg:grid-cols-5 relative gap-6 min-h-screen">
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-6">
         <CategoryFilter filters={filters} stocks={stocks} />
-      <Product />
+        <div className="lg:col-span-3">
+          <Product />
+        </div>
       </div>
     </div>
   );
