@@ -38,13 +38,16 @@ const Basket = () => {
     };
 
     try {
-      const response = await fetch("https://api.faberlick.uz/api/product-orders/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(payload),
-      });
+      const response = await fetch(
+        "https://api.faberlick.uz/api/product-orders/",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(payload),
+        }
+      );
 
       if (!response.ok) {
         throw new Error("Something went wrong");
@@ -90,7 +93,7 @@ const Basket = () => {
         {isFormVisible && (
           <div className="mt-4">
             <h3 className="text-lg font-semibold text-gray-700 mb-2">
-              Buyurtma Ma'lumotlari
+              Buyurtma Ma&apos;lumotlari
             </h3>
             <div className="space-y-4">
               <input
