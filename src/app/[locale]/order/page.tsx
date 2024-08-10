@@ -2,6 +2,7 @@
 import { useBasketStore } from "@/hooks/use-basket";
 import { XIcon } from "lucide-react";
 import { useLocale } from "next-intl";
+import Image from "next/image";
 import { useState } from "react";
 
 const Basket = () => {
@@ -144,14 +145,17 @@ const Basket = () => {
                   key={product.id}
                   className="flex justify-between items-center border-b py-4"
                 >
-                  <div className="flex items-center">
-                    <img
-                      src={product.image}
-                      alt={
-                        locale === "uz" ? product.title_uz : product.title_ru
-                      }
-                      className="w-16 h-16 object-cover rounded-lg"
-                    />
+                  <div className="flex items-center ">
+                    <div className="relative w-24 h-24">
+                      <Image
+                        src={product.image}
+                        alt={
+                          locale === "uz" ? product.title_uz : product.title_ru
+                        }
+                        fill
+                        className="object-cover rounded-lg"
+                      />
+                    </div>
                     <div className="ml-4 flex flex-col w-48">
                       <h3 className="text-lg font-semibold text-gray-700 line-clamp-2">
                         {locale === "uz" ? product.title_uz : product.title_ru}
