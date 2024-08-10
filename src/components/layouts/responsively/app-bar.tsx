@@ -1,7 +1,7 @@
 "use client";
 import useCatalog from "@/hooks/use-catalog";
 import useSearch from "@/hooks/use-search";
-import { ICategoryProduct } from "@/types";
+import { ISearchCategoryProduct } from "@/types";
 import { Button, Input } from "@headlessui/react";
 import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { LayoutGrid, Search, X } from "lucide-react";
@@ -15,7 +15,7 @@ const AppBar = () => {
   const searchOpen = useSearch();
 
   const [opened, setOpened] = useState(false);
-  const [product, setProduct] = useState<ICategoryProduct>();
+  const [product, setProduct] = useState<ISearchCategoryProduct>();
 
   const getSearch = async (params: string) => {
     if (!params) {
