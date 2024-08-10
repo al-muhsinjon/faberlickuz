@@ -119,7 +119,7 @@ interface IProduct {
   sales: number;
   brand: string;
   stock: IStoc;
-  images: IImage[];
+  image: IImage;
   short_descriptions: IShortDescription[];
   slug: string;
 }

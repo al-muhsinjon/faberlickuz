@@ -11,3 +11,17 @@
   max-height: 3em; /* 2 qatordagi matnning taxminiy balandligi */
   line-height: 1.5em; /* Matnning satr balandligi */
 }
+
+/* .swiper-slide {
+  flex-shrink: 0;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transition-property: transform;
+  display: block;
+} */
+
+/* .swiper-backface-hidden .swiper-slide {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+} */

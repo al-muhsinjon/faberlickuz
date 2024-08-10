@@ -15,7 +15,7 @@ const Header = () => {
 
   return (
     <>
-      <header className="relative">
+      <header className="relative hidden bg-white md:flex lg:flex flex-col ">
         <div className="w-full h-12 bg-[#22344D] flex py-2 text-white items-center justify-between px-12">
           <Translate />
           <div className="flex gap-6">
@@ -23,9 +23,9 @@ const Header = () => {
             <Link href={"tel:+998973470016"}>+998 97 347 00 16</Link>
           </div>
         </div>
-        <nav className="px-12 py-4 bg-white flex justify-between items-center border-b">
+        <nav className="px-12 py-4 hidden bg-white md:flex lg:flex justify-between items-center border-b">
           <Link href={"/"}>
-            <div className="relative h-8 w-32">
+            <div className="relative md:h-6 md:w-24 h-8 w-32">
               <Image
                 src={"/logo.jpg"}
                 className="object-fill"
@@ -52,7 +52,6 @@ const Header = () => {
           <Basket />
         </nav>
       </header>
-      <CatalogDrawer />
     </>
   );
 };

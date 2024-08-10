@@ -1,3 +1,4 @@
+"use client";
 import useCatalog from "@/hooks/use-catalog";
 import { Button } from "@headlessui/react";
 import axios from "axios";

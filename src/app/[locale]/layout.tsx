@@ -6,6 +6,8 @@ import { getMessages } from "next-intl/server";
 import Header from "@/components/header";
 import CatalogDrawer from "@/components/drawers/catalog-drawer";
 import Footer from "@/components/footer";
+import AppBar from "@/components/layouts/responsively/app-bar";
+import BottomNavigationBar from "@/components/layouts/responsively/bottom-navigation-bar";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,9 +30,12 @@ export default async function RootLayout({
         <NextIntlClientProvider messages={messages}>
           <div className="sticky top-0 z-[100]">
             <Header />
+            <AppBar />
+            <CatalogDrawer />
           </div>
           {/* <CatalogDrawer /> */}
-          {children}
+          <main>{children}</main>
+          <BottomNavigationBar />
           <Footer locale={locale} />
         </NextIntlClientProvider>
       </body>

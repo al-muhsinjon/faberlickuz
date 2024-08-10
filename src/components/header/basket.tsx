@@ -1,3 +1,4 @@
+"use client";
 import { useBasketStore } from "@/hooks/use-basket";
 import { Phone, ShoppingBag } from "lucide-react";
 import Link from "next/link";
@@ -15,7 +16,7 @@ const Basket = () => {
         <Phone className="text-2xl" />
       </Link>
       <Link
-        href={`uz/order`}
+        href={`/uz/order`}
         className="py-2 border-2 relative rounded-lg border-main px-4 text-white bg-main"
       >
         <span className="absolute rounded-full px-2 py-1 bg-white text-black -top-5 -right-3">
