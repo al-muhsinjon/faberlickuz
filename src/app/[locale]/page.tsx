@@ -9,17 +9,22 @@ import {
   ICategoryProduct,
   IMainPageCategory,
 } from "@/types";
+import { fetchData } from "@/utils/fetch-data";
 
 const Home = async () => {
   const [adBanner, mainPageCategory, banner, newProduct] = await Promise.all([
-    fetch(`${process.env.NEXT_API}/ad-banners/`).then((res) => res.json()),
-    fetch(`${process.env.NEXT_API}/main-page-categories/`).then((res) =>
-      res.json()
-    ),
-    fetch(`${process.env.NEXT_API}/banners/`).then((res) => res.json()),
-    fetch(`${process.env.NEXT_API}/products-catalog?is_new=true`).then((res) =>
-      res.json()
-    ),
+    fetchData(`${process.env.NEXT_API}/ad-banners/`),
+    fetchData(`${process.env.NEXT_API}/main-page-categories/`),
+    fetchData(`${process.env.NEXT_API}/banners/`),
+    fetchData(`${process.env.NEXT_API}/products-catalog?is_new=true/`),
+    // fetch(`${process.env.NEXT_API}/ad-banners/`).then((res) => res.json()),
+    // fetch(`${process.env.NEXT_API}/main-page-categories/`).then((res) =>
+    //   res.json()
+    // ),
+    // fetch(`${process.env.NEXT_API}/banners/`).then((res) => res.json()),
+    // fetch(`${process.env.NEXT_API}/products-catalog?is_new=true`).then((res) =>
+    //   res.json()
+    // ),
   ]);
 
   return (

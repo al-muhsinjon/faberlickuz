@@ -205,7 +205,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
           </p>
         )}
         <p className="text-base font-semibold text-main">
-          <span>{product.price}</span>
+          <span>{product.sales}</span>
           <span>&nbsp;{t("btns.sum")}</span>
         </p>
       </div>

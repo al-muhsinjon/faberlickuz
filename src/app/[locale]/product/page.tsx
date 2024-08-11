@@ -3,17 +3,23 @@ import { IMainPageCategory, IStoc } from "@/types";
 import Link from "next/link";
 import React from "react";
 import Product from "./product";
+import { fetchData } from "@/utils/fetch-data";
 
 const ProductsPage = async ({
   params,
 }: {
   params: { productSlug: string; locale: string };
 }) => {
-  const res = await fetch(`${process.env.NEXT_API}/main-page-categories/`);
-  const filters: IMainPageCategory[] = await res.json();
+  // const res = await fetch(`${process.env.NEXT_API}/main-page-categories/`);
+  // const filters: IMainPageCategory[] = await res.json();
 
-  const stockFetcher = await fetch(`${process.env.NEXT_API}/stocks`);
-  const stocks: IStoc[] = await stockFetcher.json();
+  const [filters, stocks] = await Promise.all([
+    fetchData(`${process.env.NEXT_API}/main-page-categories/`),
+    fetchData(`${process.env.NEXT_API}/stocks`),
+  ]);
+
+  // const stockFetcher = await fetch(`${process.env.NEXT_API}/stocks`);
+  // const stocks: IStoc[] = await stockFetcher.json();
 
   return (
     <div className="container mx-auto px-4 py-6">

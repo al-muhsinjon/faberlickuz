@@ -1,0 +1,15 @@
+[
+  {
+    "id": 2,
+    "web_image_uz": "https://api.faberlick.uz/media/images/6dcf10e8-7eb1-4dfd-a80a-5fdb6c09e90f.webp",
+    "web_image_ru": "https://api.faberlick.uz/media/images/f0bb45b3-dce1-4ea5-98d3-7bba5eac45f7.webp",
+    "rsp_image_uz": "https://api.faberlick.uz/media/images/058b6ad3-4160-4d9a-aef7-ec6cd4d00d09.webp",
+    "rsp_image_ru": "https://api.faberlick.uz/media/images/8c768ef6-a8d2-49be-925b-f668a2548cfe.webp",
+    "is_advertisement": false,
+    "category": { "id": 1, "title_uz": "Erkaklar", "title_ru": "Мужчины" },
+    "sub_category": { "id": 1, "title_uz": "Ifоrlar", "title_ru": "Ароматы" },
+    "brand": { "id": 1, "title_uz": "FABERLIK", "title_ru": "ФАБЕРЛИК" },
+    "product": { "id": 1, "title": "Бамбуковая варежка-мочалка" },
+    "stock": { "id": 1, "stock_type": "Aksiya" }
+  }
+]

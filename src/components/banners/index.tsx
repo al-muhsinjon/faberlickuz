@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -37,7 +38,7 @@ const Banner: React.FC<BannerProps> = ({ banners }) => {
   return (
     <div className="mt-6 mx-auto w-full lg:w-full px-6 lg:px-12 rounded-md h-[20rem] lg:h-[30rem] relative">
       <Swiper
-        loop={banners.length > 1} // Conditionally enable loop if there are multiple banners
+        loop={banners.length > 1} // Agar bir nechta banner bo'lsa loopni yoqadi
         modules={[Navigation, Autoplay]}
         autoplay={{ delay: 2500, disableOnInteraction: false }}
         spaceBetween={5}
@@ -61,11 +62,14 @@ const Banner: React.FC<BannerProps> = ({ banners }) => {
               <Image
                 priority
                 src={
-                  locale === "uz" ? banner.web_image_uz : banner.web_image_ru
+                  banner?.web_image_uz && locale === "uz"
+                    ? banner.web_image_uz
+                    : banner?.web_image_ru || "/default-banner.jpg"
                 }
                 className="rounded-lg object-cover"
                 fill
                 alt={`Banner ${ind}`}
+                onError={(e) => (e.currentTarget.src = "/default-banner.jpg")} // Fallback rasm
               />
             </div>
           </SwiperSlide>

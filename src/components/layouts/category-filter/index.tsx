@@ -35,7 +35,7 @@ const CategoryFilter: React.FC<Props> = ({ filters, stocks }) => {
               <input
                 name="catalog"
                 type="radio"
-                className="w-4 h-4 border border-gray-300 rounded focus:ring-indigo-500"
+                className="w-4 h-4 border border-gray-300 rounded focus:ring-main"
                 id="Barcha kategoriya"
                 value="all"
               />
@@ -53,7 +53,7 @@ const CategoryFilter: React.FC<Props> = ({ filters, stocks }) => {
                 <input
                   name="catalog"
                   type="radio"
-                  className="w-4 h-4 border border-gray-300 rounded focus:ring-indigo-500"
+                  className="w-4 h-4 border border-gray-300 rounded focus:ring-main"
                   id={filter.title_uz}
                   value={filter.title_uz}
                   onChange={(e) => setValue(e.target.value)}
@@ -76,7 +76,7 @@ const CategoryFilter: React.FC<Props> = ({ filters, stocks }) => {
               <input
                 name="catalog"
                 type="checkbox"
-                className="w-4 h-4 border border-gray-300 rounded focus:ring-indigo-500"
+                className="w-4 h-4 border border-gray-300 rounded focus:ring-main"
                 id={stock.title_uz}
                 value="all"
               />
@@ -89,7 +89,7 @@ const CategoryFilter: React.FC<Props> = ({ filters, stocks }) => {
       </Accordion>
       <button
         type="submit"
-        className="mt-4 w-full bg-indigo-600 text-white py-2 px-4 rounded-md hover:bg-indigo-700 transition"
+        className="mt-4 w-full bg-main text-white py-2 px-4 rounded-md hover:bg-main transition"
       >
         Saralash
       </button>
