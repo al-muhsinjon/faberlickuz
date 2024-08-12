@@ -13,9 +13,10 @@ const ProductsPage = async ({
   // const res = await fetch(`${process.env.NEXT_API}/main-page-categories/`);
   // const filters: IMainPageCategory[] = await res.json();
 
-  const [filters, stocks] = await Promise.all([
+  const [filters, stocks, brands] = await Promise.all([
     fetchData(`${process.env.NEXT_API}/main-page-categories/`),
-    fetchData(`${process.env.NEXT_API}/stocks`),
+    fetchData(`${process.env.NEXT_API}/stocks/`),
+    fetchData(`${process.env.NEXT_API}/brands/`),
   ]);
 
   // const stockFetcher = await fetch(`${process.env.NEXT_API}/stocks`);
@@ -47,7 +48,7 @@ const ProductsPage = async ({
         </Link>
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 mt-6">
-        <CategoryFilter filters={filters} stocks={stocks} />
+        <CategoryFilter filters={filters} stocks={stocks} brands={brands} />
         <div className="lg:col-span-3">
           <Product />
         </div>

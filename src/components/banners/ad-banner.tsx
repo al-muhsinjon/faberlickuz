@@ -1,55 +1,3 @@
-// "use client";
-// import Image from "next/image";
-// import React from "react";
-// import { IAdBanner } from "@/types";
-// import { useRouter } from "next/navigation";
-// import { useCategoryStore } from "@/hooks/use-category";
-
-// type AdBannerProps = {
-//   adBanner: IAdBanner[];
-// };
-
-// const AdBanner: React.FC<AdBannerProps> = ({ adBanner }) => {
-//   const setCategories = useCategoryStore((state) => state.setCategories);
-//   const router = useRouter();
-
-//   const handleBannerClick = (banner: IAdBanner) => {
-//     const updatedCategory = {
-//       brand: banner.brand ? `&brand=${banner.brand.title_uz}` : "",
-//       category: banner.category ? `&category=${banner.category.title_uz}` : "",
-//       sub_category: banner.sub_category
-//         ? `&sub_category=${banner.sub_category.title_uz}`
-//         : "",
-//       stock: banner.stock ? `&stock=${banner.stock.stock_type}` : "",
-//     };
-
-//     setCategories(updatedCategory);
-//     router.push("/uz/product");
-//   };
-
-//   return (
-//     <>
-//       {adBanner.map((banner) => (
-//         <div
-//           key={banner.id}
-//           onClick={() => handleBannerClick(banner)}
-//           className="w-full rounded-lg h-96 overflow-hidden relative cursor-pointer"
-//         >
-//           <Image
-//             alt="ad banner"
-//             className="object-cover"
-//             priority
-//             src={banner.web_image_ru}
-//             fill
-//           />
-//         </div>
-//       ))}
-//     </>
-//   );
-// };
-
-// export default AdBanner;
-
 "use client";
 import Image from "next/image";
 import React from "react";
@@ -88,11 +36,14 @@ const AdBanner: React.FC<AdBannerProps> = ({ adBanner }) => {
           className="relative h-60 lg:h-96 rounded-lg overflow-hidden cursor-pointer"
         >
           <Image
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px)  100vw, 80vw"
             alt="ad banner"
             src={locale === "uz" ? banner.web_image_uz : banner.web_image_ru}
             fill
             className="object-cover"
-            priority
+            // priority
+            loading="lazy"
+            blurDataURL="/blur-image.jpg"
           />
         </div>
       ))}

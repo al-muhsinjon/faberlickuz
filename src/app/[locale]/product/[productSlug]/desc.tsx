@@ -1,5 +1,5 @@
 import { IProduct } from "@/types";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import React from "react";
 
 interface Props {
@@ -8,9 +8,13 @@ interface Props {
 
 const Desc: React.FC<Props> = ({ product }) => {
   const locale = useLocale();
+  const t = useTranslations("Product");
   return (
     <div>
-      <p>{locale === "uz" ? product.description_uz : product.description_ru}</p>
+      <h2 className="text-2xl font-semibold">{t("description")}</h2>
+      <p>
+        {locale === "uz" ? product?.description_uz : product?.description_ru}
+      </p>
     </div>
   );
 };

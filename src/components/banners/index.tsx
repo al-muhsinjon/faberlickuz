@@ -38,7 +38,7 @@ const Banner: React.FC<BannerProps> = ({ banners }) => {
   return (
     <div className="mt-6 mx-auto w-full lg:w-full px-6 lg:px-12 rounded-md h-[20rem] lg:h-[30rem] relative">
       <Swiper
-        loop={banners.length > 1} // Agar bir nechta banner bo'lsa loopni yoqadi
+        loop={banners.length > 1}
         modules={[Navigation, Autoplay]}
         autoplay={{ delay: 2500, disableOnInteraction: false }}
         spaceBetween={5}
@@ -52,24 +52,25 @@ const Banner: React.FC<BannerProps> = ({ banners }) => {
         }}
         className="h-full"
       >
-        {banners.map((banner, ind) => (
+        {banners.map((banner, index) => (
           <SwiperSlide
-            key={ind}
+            key={index}
             onClick={() => handleBannerClick(banner)}
             className="cursor-pointer"
           >
             <div className="relative w-full h-full">
               <Image
-                priority
                 src={
                   banner?.web_image_uz && locale === "uz"
-                    ? banner.web_image_uz
+                    ? banner?.web_image_uz
                     : banner?.web_image_ru || "/default-banner.jpg"
                 }
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px)  100vw, 80vw"
                 className="rounded-lg object-cover"
                 fill
-                alt={`Banner ${ind}`}
-                onError={(e) => (e.currentTarget.src = "/default-banner.jpg")} // Fallback rasm
+                loading="eager"
+                alt={`Banner ${index}`}
+                onError={(e) => (e.currentTarget.src = "/default-banner.jpg")}
               />
             </div>
           </SwiperSlide>
@@ -77,13 +78,13 @@ const Banner: React.FC<BannerProps> = ({ banners }) => {
       </Swiper>
       <Button
         ref={prevRef}
-        className="absolute top-1/2 left-4 lg:left-12 transform -translate-y-1/2 z-10 bg-main text-white rounded-full p-2"
+        className="absolute top-1/2 left-4 lg:left-24 transform -translate-y-1/2 z-10 bg-main text-white rounded-full p-2"
       >
         <ChevronLeft size={24} />
       </Button>
       <Button
         ref={nextRef}
-        className="absolute top-1/2 right-4 lg:right-12 transform -translate-y-1/2 z-10 bg-main text-white rounded-full p-2"
+        className="absolute top-1/2 right-4 lg:right-24 transform -translate-y-1/2 z-10 bg-main text-white rounded-full p-2"
       >
         <ChevronRight size={24} />
       </Button>

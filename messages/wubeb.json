@@ -1,15 +1,29 @@
-[
-  {
-    "id": 2,
-    "web_image_uz": "https://api.faberlick.uz/media/images/6dcf10e8-7eb1-4dfd-a80a-5fdb6c09e90f.webp",
-    "web_image_ru": "https://api.faberlick.uz/media/images/f0bb45b3-dce1-4ea5-98d3-7bba5eac45f7.webp",
-    "rsp_image_uz": "https://api.faberlick.uz/media/images/058b6ad3-4160-4d9a-aef7-ec6cd4d00d09.webp",
-    "rsp_image_ru": "https://api.faberlick.uz/media/images/8c768ef6-a8d2-49be-925b-f668a2548cfe.webp",
-    "is_advertisement": false,
-    "category": { "id": 1, "title_uz": "Erkaklar", "title_ru": "Мужчины" },
-    "sub_category": { "id": 1, "title_uz": "Ifоrlar", "title_ru": "Ароматы" },
-    "brand": { "id": 1, "title_uz": "FABERLIK", "title_ru": "ФАБЕРЛИК" },
-    "product": { "id": 1, "title": "Бамбуковая варежка-мочалка" },
-    "stock": { "id": 1, "stock_type": "Aksiya" }
-  }
-]
+{
+  "title_uz": "Парфюмерная вода для женщин FABERLIC VALKYRIE 50 мл",
+  "title_ru": "Парфюмерная вода для женщин Valkyrie",
+  "price": 410000,
+"sales": 307000,
+  "category": 9,
+  "image_ids": [
+    16
+  ],
+  "description_uz": "12 avgustdan 1 sentyabrga qadar FABERLICda ro'yxatdan o'tgan va №12/2024 davrda xarid qilganlarga, Extra Oxy universal kislorodli dog' ketkazish vositasi (30062), universal dog' ketkazuvchi sprey (30151) va dog'larni ketkazish uchun nam salfetkalarni (30552) 2024 yil 2 dan 22 sentyabrga qadar amal qilgan katalog bo'yicha sovg'a qilamiz",
+  "description_ru": "Аромат Valkyrie создан эксклюзивно для Faberlic мэтром мировой парфюмерии Оливье Креспом. Валькирия... Благородная и мудрая. Её энергия превозмогает невозможное! Она знает, чехочет,и всегда добивается этого Направление аромата: прохладный цветочно-цитрусовый аромат. Хрустальный, мерцающий аромат олицетворяет образ скандинавской девы-воительницы прохладными нотами княженики и апельсина Тарокко. В самом сердце парфюма неприступный эдельвейс, как символ верности и отваги, нежный гиацинт, как отражение любви и преданности, заснеженные лепестки розы – словно холодная нордическая красота королевы Севера ",
+  "is_available": true,
+  "sub_category": 6,
+  "brand": 1,
+  "short_descriptions": [
+    {
+      "key_uz": "Qadoqlash uzunligi",
+      "key_ru": "Длина упаковки",
+      "value_uz": "5 см",
+      "value_ru": "5 см"
+    },
+    {
+      "key_uz": "Paket balandligi",
+      "key_ru": "Высота упаковки",
+      "value_uz": "24 см",
+      "value_ru": "24 см"
+    }
+  ]
+}

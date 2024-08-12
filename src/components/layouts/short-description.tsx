@@ -13,7 +13,7 @@ const ShortDescription: React.FC<Props> = ({ description }) => {
     <div className="md:col-span-4 space-y-2.5  text-darkBlue">
       <h2 className="font-medium md:text-lg">{t("qisqacha")}</h2>
       <div className="space-y-2">
-        {description.map((desc) => (
+        {description?.map((desc) => (
           <div
             key={desc.id}
             className=" text-sm xl:text-base flex justify-between items-end  w-full "

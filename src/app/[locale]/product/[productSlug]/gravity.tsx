@@ -46,8 +46,8 @@ const Gravity: React.FC<Props> = ({ product }) => {
           d="m1 9 4-4-4-4"
         />
       </svg>
-      <Link href={`/${locale}/product/${product.slug}`}>
-        {locale === "uz" ? product.title_uz : product.title_ru}
+      <Link href={`/${locale}/product/${product?.slug}`}>
+        {locale === "uz" ? product?.title_uz : product?.title_ru}
       </Link>
     </div>
   );

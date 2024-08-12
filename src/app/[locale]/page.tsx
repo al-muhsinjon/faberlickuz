@@ -11,20 +11,14 @@ import {
 } from "@/types";
 import { fetchData } from "@/utils/fetch-data";
 
-const Home = async () => {
+export const revalidate = 60;
+
+const Home: React.FC = async () => {
   const [adBanner, mainPageCategory, banner, newProduct] = await Promise.all([
     fetchData(`${process.env.NEXT_API}/ad-banners/`),
     fetchData(`${process.env.NEXT_API}/main-page-categories/`),
     fetchData(`${process.env.NEXT_API}/banners/`),
     fetchData(`${process.env.NEXT_API}/products-catalog?is_new=true/`),
-    // fetch(`${process.env.NEXT_API}/ad-banners/`).then((res) => res.json()),
-    // fetch(`${process.env.NEXT_API}/main-page-categories/`).then((res) =>
-    //   res.json()
-    // ),
-    // fetch(`${process.env.NEXT_API}/banners/`).then((res) => res.json()),
-    // fetch(`${process.env.NEXT_API}/products-catalog?is_new=true`).then((res) =>
-    //   res.json()
-    // ),
   ]);
 
   return (
@@ -35,9 +29,6 @@ const Home = async () => {
         <AdBanner adBanner={adBanner} />
       </div>
       <div className="p-4 lg:p-12">
-        <h2 className="border-b py-4 border-main text-2xl lg:text-4xl font-medium">
-          Новинки
-        </h2>
         <NewProduct newProducts={newProduct} />
       </div>
     </div>

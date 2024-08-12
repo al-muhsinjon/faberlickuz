@@ -29,9 +29,10 @@ const AddToBasket: React.FC<Props> = ({ product }) => {
 
   return (
     <button
+      disabled={!product?.is_available}
       onClick={handleAddToBasket}
       className="
-          bg-darkBlue text-white mt-3.5 border-main 
+          bg-darkBlue text-white mt-3.5 cursor-pointer disabled:cursor-not-allowed border-main 
           hover:opacity-80 flex items-center justify-center gap-3 border
           relative rounded-lg font-rubik md:text-lg px-4 py-2 undefined 
           group w-full text-sm  lg:text-lg  

@@ -123,6 +123,7 @@ interface IProduct {
   stock: IStoc;
   images: IImage[];
   short_descriptions: IShortDescription[];
+  is_available: boolean;
   slug: string;
 }
 
