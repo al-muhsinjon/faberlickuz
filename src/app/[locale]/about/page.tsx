@@ -1,11 +1,23 @@
-import React from 'react'
+import React from "react";
+import About from "./about";
+import { fetchData } from "@/utils/fetch-data";
+import Service from "@/components/layouts/service";
+import Gravity from "./gravity";
 
-const AboutPage = () => {
+const AboutPage = async ({ params }: { params: { locale: string } }) => {
+  const [contact, socials] = await Promise.all([
+    fetchData(`${process.env.NEXT_API}/about/contacts/`),
+    fetchData(`${process.env.NEXT_API}/about/socials/`),
+  ]);
   return (
-    <div>
-        
+    <div className="px-12">
+      <Gravity />
+      <About contact={contact} socials={socials} />
+      <div className="py-6">
+        <Service />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default AboutPage
+export default AboutPage;

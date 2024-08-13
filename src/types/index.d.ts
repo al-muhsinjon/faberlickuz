@@ -127,6 +127,15 @@ interface IProduct {
   slug: string;
 }
 
+interface IService {
+  id: number;
+  title_uz: string;
+  title_ru: string;
+  sub_title_uz: string;
+  sub_title_ru: string;
+  image: string;
+}
+
 interface IProductC {
   id: number;
   title_uz: string;
@@ -179,4 +188,30 @@ export interface IBasket {
   allPrice: number;
   allCount: number;
   orderType: string;
+}
+
+export interface IContact {
+  id: number;
+  address_uz: string;
+  address_ru: string;
+  phone_1: string;
+  phone_2: string;
+  email: string;
+  map: string;
+}
+
+export interface ISocial {
+  id: number;
+  instagram: string;
+  facebook: string;
+  telegram: string;
+}
+
+export interface IService {
+  id: number;
+  title_uz: string;
+  title_ru: string;
+  sub_title_uz: string;
+  sub_title_ru: string;
+  image: string;
 }

@@ -10,6 +10,7 @@ import {
   IMainPageCategory,
 } from "@/types";
 import { fetchData } from "@/utils/fetch-data";
+import Service from "@/components/layouts/service";
 
 export const revalidate = 60;
 
@@ -18,7 +19,9 @@ const Home: React.FC = async () => {
     fetchData(`${process.env.NEXT_API}/ad-banners/`),
     fetchData(`${process.env.NEXT_API}/main-page-categories/`),
     fetchData(`${process.env.NEXT_API}/banners/`),
-    fetchData(`${process.env.NEXT_API}/products-catalog?is_new=true/`),
+    fetchData(
+      `${process.env.NEXT_API}/products-catalog?is_new=true&page=1&page_size=8/`
+    ),
   ]);
 
   return (
@@ -30,6 +33,9 @@ const Home: React.FC = async () => {
       </div>
       <div className="p-4 lg:p-12">
         <NewProduct newProducts={newProduct} />
+      </div>
+      <div className="px-4 lg:px-12">
+        <Service />
       </div>
     </div>
   );

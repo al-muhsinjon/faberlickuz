@@ -1,4 +1,3 @@
-
 import axios from "axios";
 import Link from "next/link";
 import { FaFacebook, FaInstagram, FaTelegramPlane } from "react-icons/fa";
@@ -13,7 +12,7 @@ const Footer = async ({ locale }: { locale: string }) => {
   const { address_uz, phone_1, phone_2, address_ru } = data;
 
   return (
-    <footer className="bg-main md:block lg:block hidden text-white">
+    <footer className="bg-main md:block lg:block lg:p-0 md:p-0 pb-8 text-white">
       <div className="container mx-auto divide-y px-4 py-4 lg:px-12">
         <div className="flex flex-col lg:flex-row justify-between items-start lg:items-center py-4">
           <div>{locale === "uz" ? address_uz : address_ru}</div>

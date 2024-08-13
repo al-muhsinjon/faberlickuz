@@ -47,7 +47,14 @@
   "Contact": {
     "title": "Свяжитесь с нами",
     "email": "Электронная почта",
-    "phone": "Телефон"
+    "phone": "Телефон",
+    "gravity": {
+      "home": "Главная",
+      "page": "Контакт"
+    }
+  },
+  "Header": {
+    "product": "Продукты"
   },
   "Footer": {
     "reserve": "2024 Faberlic, Inc. Все права защищены."

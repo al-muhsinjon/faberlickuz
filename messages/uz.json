@@ -47,7 +47,14 @@
   "Contact": {
     "title": "Biz bilan bog'laning",
     "email": "Elektorn pochta",
-    "phone": "Telefon"
+    "phone": "Telefon",
+    "gravity": {
+      "home": "Asosiy",
+      "page": "Aloqa"
+    }
+  },
+  "Header": {
+    "product": "Mahsulotlar"
   },
   "Footer": {
     "reserve": "2024 Faberlic, Inc. Barcha huquqlar himoyalangan."

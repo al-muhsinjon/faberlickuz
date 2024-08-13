@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Translate from "./translate";
 import Image from "next/image";
 import SearchComponent from "./search";
@@ -9,18 +9,31 @@ import { LayoutGrid, X } from "lucide-react";
 import Basket from "./basket";
 import useCatalog from "@/hooks/use-catalog";
 import CatalogDrawer from "../drawers/catalog-drawer";
+import { fetchData } from "@/utils/fetch-data";
+import { IContact } from "@/types";
+import { useTranslations } from "next-intl";
 
 const Header = () => {
   const { onOpen, onClose, isOpen } = useCatalog();
-
+  const [contact, setContact] = useState<IContact>();
+  const t = useTranslations("Header");
+  const getData = async () => {
+    const [contact] = await Promise.all([
+      fetchData(`${process.env.NEXT_API}/about/contacts/`),
+    ]);
+    setContact(contact);
+  };
+  useEffect(() => {
+    getData();
+  }, []);
   return (
     <>
       <header className="relative hidden bg-white md:flex lg:flex flex-col ">
         <div className="w-full h-12 bg-[#22344D] flex py-2 text-white items-center justify-between px-12">
           <Translate />
           <div className="flex gap-6">
-            <Link href={"/ru/product"}>Product</Link>
-            <Link href={"tel:+998973470016"}>+998 97 347 00 16</Link>
+            <Link href={"/ru/product"}>{t("product")}</Link>
+            <Link href={`tel:${contact?.phone_1}`}>{contact?.phone_1}</Link>
           </div>
         </div>
         <nav className="px-12 py-4 hidden bg-white md:flex lg:flex justify-between items-center border-b">

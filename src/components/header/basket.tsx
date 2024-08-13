@@ -1,16 +1,18 @@
 "use client";
 import { useBasketStore } from "@/hooks/use-basket";
 import { Phone, ShoppingBag } from "lucide-react";
+import { useLocale } from "next-intl";
 import Link from "next/link";
 import React from "react";
 
 const Basket = () => {
   const { allCount } = useBasketStore();
+  const locale = useLocale();
 
   return (
     <div className="flex items-center gap-6">
       <Link
-        href={`/product`}
+        href={`/${locale}/about`}
         className="py-2 border-2 rounded-lg border-main px-4 text-main"
       >
         <Phone className="text-2xl" />
