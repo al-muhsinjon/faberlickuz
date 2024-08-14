@@ -7,7 +7,7 @@ interface Props {
 }
 
 const useByFilter = create<Props>((set) => ({
-  isOpen: true,
+  isOpen: false,
   onClose: () => set({ isOpen: false }),
   onOpen: () => set({ isOpen: true }),
 }));

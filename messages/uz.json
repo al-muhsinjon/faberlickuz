@@ -56,6 +56,12 @@
   "Header": {
     "product": "Mahsulotlar"
   },
+  "Category": {
+    "highPrice": "Eng yuqori narx",
+    "lowPrice": "Eng past narx",
+    "forAlphabetAZ": "Alifbo bo'yicha A-Z",
+    "forAlphabetZA": "Alifbo bo'yicha Z-A"
+  },
   "Footer": {
     "reserve": "2024 Faberlic, Inc. Barcha huquqlar himoyalangan."
   }

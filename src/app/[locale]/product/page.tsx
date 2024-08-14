@@ -10,7 +10,7 @@ const ProductsPage = async ({
   params: { productSlug: string; locale: string };
 }) => {
   const [filters, stocks, brands] = await Promise.all([
-    fetchData(`${process.env.NEXT_API}/main-page-categories/`),
+    fetchData(`${process.env.NEXT_API}/categories/`),
     fetchData(`${process.env.NEXT_API}/stocks/`),
     fetchData(`${process.env.NEXT_API}/brands/`),
   ]);

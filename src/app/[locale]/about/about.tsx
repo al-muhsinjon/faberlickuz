@@ -97,6 +97,8 @@ const About: React.FC<Props> = ({ contact, socials }) => {
         </div>
       </div>
       <iframe
+        loading="lazy"
+        referrerPolicy="no-referrer-when-downgrade"
         className="w-full aspect-video lg:aspect-[10/7]"
         src={contact.map}
       ></iframe>

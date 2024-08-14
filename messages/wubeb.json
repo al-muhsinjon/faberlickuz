@@ -1,34 +1,463 @@
 [
   {
-    "id": 5,
-    "title_uz": "Eng yaxshi narxlar",
-    "title_ru": "Лучшие цены",
-    "sub_title_uz": "Biz pul uchun eng yaxshi qiymatni taklif qilamiz",
-    "sub_title_ru": "Мы предлагаем лучшее соотношение цены и качества",
-    "image": "https://sirius-tech.uz/media/images/a261c955-e756-44c4-bd73-1667e499bd04.png"
+    "id": 9,
+    "title_uz": "Chehollar",
+    "title_ru": "Чехлы",
+    "image": "https://sirius-tech.uz/media/images/12d4d059-70e8-400a-a198-45e8ce2eb87a.jpg",
+    "is_index": true,
+    "count": 7,
+    "min_price": 40000,
+    "max_price": 550000
   },
   {
-    "id": 4,
-    "title_uz": "24/7 qo'llab quvvatlash",
-    "title_ru": "Поддержка 24/7",
-    "sub_title_uz": "Biz bilan kuniga 24 soat, haftada 7 kun bog'lanishingiz mumkin.",
-    "sub_title_ru": "Вы можете связаться с нами 24 часа в сутки, 7 дней в неделю.",
-    "image": "https://sirius-tech.uz/media/images/829f8b9e-5d0f-45cb-aebc-e259e0ddd9a6.png"
+    "id": 8,
+    "title_uz": "Himoya plyonkalar",
+    "title_ru": "Защитные пленки",
+    "image": "https://sirius-tech.uz/media/images/bcf9d4b7-bd6e-487a-bcb2-8256c52dd7f2.jpg",
+    "is_index": true,
+    "count": 7,
+    "min_price": 0.0,
+    "max_price": 0.0,
+    "brands": [{ "id": 2, "title_uz": "apple", "title_ru": "apple" }],
+    "sub_categories": [
+      {
+        "id": 9,
+        "title_uz": "Smartfon uchun shishalar",
+        "title_ru": "Стеклa для смартфонов",
+        "categories": {
+          "id": 8,
+          "title_uz": "Himoya plyonkalar",
+          "title_ru": "Защитные пленки"
+        },
+        "min_price": 0.0,
+        "max_price": 0.0,
+        "brands": [
+          {
+            "id": 2,
+            "title_uz": "apple",
+            "title_ru": "apple",
+            "min_price": 40000,
+            "max_price": 550000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title_uz": "Planshetlar",
+    "title_ru": "Планшеты",
+    "image": "https://sirius-tech.uz/media/images/6434e56b-c1e9-4ca1-a2d9-7bbf9e9731d7.jpg",
+    "is_index": true,
+    "count": 7,
+    "min_price": 520000,
+    "max_price": 1500000,
+    "brands": [{ "id": 1, "title_uz": "C idea", "title_ru": "C idea" }],
+    "sub_categories": [
+      {
+        "id": 24,
+        "title_uz": "Talabalar uchun",
+        "title_ru": "Студенческиe",
+        "categories": {
+          "id": 7,
+          "title_uz": "Planshetlar",
+          "title_ru": "Планшеты"
+        },
+        "min_price": 520000,
+        "max_price": 1500000,
+        "brands": [
+          {
+            "id": 1,
+            "title_uz": "C idea",
+            "title_ru": "C idea",
+            "min_price": 520000,
+            "max_price": 1500000
+          }
+        ]
+      },
+      {
+        "id": 20,
+        "title_uz": "Bolalar Planshetlari",
+        "title_ru": "Детские",
+        "categories": {
+          "id": 7,
+          "title_uz": "Planshetlar",
+          "title_ru": "Планшеты"
+        },
+        "min_price": 0.0,
+        "max_price": 0.0,
+        "brands": [
+          {
+            "id": 1,
+            "title_uz": "C idea",
+            "title_ru": "C idea",
+            "min_price": 520000,
+            "max_price": 1500000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title_uz": "Audio",
+    "title_ru": "Аудио",
+    "image": "https://sirius-tech.uz/media/images/84b9df68-79d4-49c1-9dd0-cca412f068d8.jpg",
+    "is_index": true,
+    "count": 7,
+    "min_price": 40000,
+    "max_price": 455000,
+    "brands": [
+      { "id": 2, "title_uz": "apple", "title_ru": "apple" },
+      { "id": 9, "title_uz": "hoco", "title_ru": "hoco" },
+      { "id": 12, "title_uz": "remax", "title_ru": "remax" },
+      { "id": 15, "title_uz": "recci", "title_ru": "recci" }
+    ],
+    "sub_categories": [
+      {
+        "id": 11,
+        "title_uz": "Quloqchinlar",
+        "title_ru": "Наушники",
+        "categories": { "id": 6, "title_uz": "Audio", "title_ru": "Аудио" },
+        "min_price": 40000,
+        "max_price": 380000,
+        "brands": [
+          {
+            "id": 2,
+            "title_uz": "apple",
+            "title_ru": "apple",
+            "min_price": 40000,
+            "max_price": 550000
+          },
+          {
+            "id": 12,
+            "title_uz": "remax",
+            "title_ru": "remax",
+            "min_price": 350000,
+            "max_price": 455000
+          },
+          {
+            "id": 15,
+            "title_uz": "recci",
+            "title_ru": "recci",
+            "min_price": 280000,
+            "max_price": 400000
+          }
+        ]
+      },
+      {
+        "id": 10,
+        "title_uz": "Airpods",
+        "title_ru": "Airpods",
+        "categories": { "id": 6, "title_uz": "Audio", "title_ru": "Аудио" },
+        "min_price": 80000,
+        "max_price": 80000,
+        "brands": [
+          {
+            "id": 2,
+            "title_uz": "apple",
+            "title_ru": "apple",
+            "min_price": 40000,
+            "max_price": 550000
+          }
+        ]
+      },
+      {
+        "id": 22,
+        "title_uz": "Speaker",
+        "title_ru": "Динамик",
+        "categories": { "id": 6, "title_uz": "Audio", "title_ru": "Аудио" },
+        "min_price": 185000,
+        "max_price": 455000,
+        "brands": [
+          {
+            "id": 12,
+            "title_uz": "remax",
+            "title_ru": "remax",
+            "min_price": 350000,
+            "max_price": 455000
+          },
+          {
+            "id": 9,
+            "title_uz": "hoco",
+            "title_ru": "hoco",
+            "min_price": 60000,
+            "max_price": 185000
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title_uz": "SmartWatch",
+    "title_ru": "SmartWatch",
+    "image": "https://sirius-tech.uz/media/images/017e85f1-860d-4df1-8cfd-20d0a3af2759.jpg",
+    "is_index": true,
+    "count": 7,
+    "min_price": 70000,
+    "max_price": 180000,
+    "brands": [
+      { "id": 2, "title_uz": "apple", "title_ru": "apple" },
+      { "id": 11, "title_uz": "HIwatch", "title_ru": "HIwatch" }
+    ],
+    "sub_categories": [
+      {
+        "id": 13,
+        "title_uz": "Soati tasmasi",
+        "title_ru": "Ремешок для часов",
+        "categories": {
+          "id": 5,
+          "title_uz": "SmartWatch",
+          "title_ru": "SmartWatch"
+        },
+        "min_price": 75000,
+        "max_price": 75000,
+        "brands": [
+          {
+            "id": 2,
+            "title_uz": "apple",
+            "title_ru": "apple",
+            "min_price": 40000,
+            "max_price": 550000
+          }
+        ]
+      },
+      {
+        "id": 17,
+        "title_uz": "iWatch",
+        "title_ru": "iWatch",
+        "categories": {
+          "id": 5,
+          "title_uz": "SmartWatch",
+          "title_ru": "SmartWatch"
+        },
+        "min_price": 70000,
+        "max_price": 180000,
+        "brands": [
+          {
+            "id": 11,
+            "title_uz": "HIwatch",
+            "title_ru": "HIwatch",
+            "min_price": 70000,
+            "max_price": 180000
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 3,
-    "title_uz": "Tez yetkazib berish",
-    "title_ru": "Быстрая доставка",
-    "sub_title_uz": "Buyurtmani kutish vaqti 5 soat ichida",
-    "sub_title_ru": "Время ожидания заказа в течение 5 часов",
-    "image": "https://sirius-tech.uz/media/images/0ce74ca8-a6e1-4a06-9ada-6f74bb513941.png"
+    "title_uz": "Kabellar",
+    "title_ru": "Кабели",
+    "image": "https://sirius-tech.uz/media/images/432f7fab-f035-47b7-9817-342023474c74.jpg",
+    "is_index": true,
+    "count": 7,
+    "min_price": 25000,
+    "max_price": 45000,
+    "brands": [
+      { "id": 3, "title_uz": "BOROFONE", "title_ru": "BOROFONE" },
+      { "id": 13, "title_uz": "xiaomi", "title_ru": "xiaomi" }
+    ],
+    "sub_categories": [
+      {
+        "id": 16,
+        "title_uz": "Android",
+        "title_ru": "Android",
+        "categories": { "id": 3, "title_uz": "Kabellar", "title_ru": "Кабели" },
+        "min_price": 0.0,
+        "max_price": 0.0,
+        "brands": [
+          {
+            "id": 13,
+            "title_uz": "xiaomi",
+            "title_ru": "xiaomi",
+            "min_price": 45000,
+            "max_price": 45000
+          },
+          {
+            "id": 3,
+            "title_uz": "BOROFONE",
+            "title_ru": "BOROFONE",
+            "min_price": 25000,
+            "max_price": 215000
+          }
+        ]
+      },
+      {
+        "id": 15,
+        "title_uz": "iPhone",
+        "title_ru": "iPhone",
+        "categories": { "id": 3, "title_uz": "Kabellar", "title_ru": "Кабели" },
+        "min_price": 0.0,
+        "max_price": 0.0,
+        "brands": [
+          {
+            "id": 3,
+            "title_uz": "BOROFONE",
+            "title_ru": "BOROFONE",
+            "min_price": 25000,
+            "max_price": 215000
+          }
+        ]
+      },
+      {
+        "id": 14,
+        "title_uz": "Type-C",
+        "title_ru": "Type-C",
+        "categories": { "id": 3, "title_uz": "Kabellar", "title_ru": "Кабели" },
+        "min_price": 25000,
+        "max_price": 45000,
+        "brands": [
+          {
+            "id": 13,
+            "title_uz": "xiaomi",
+            "title_ru": "xiaomi",
+            "min_price": 45000,
+            "max_price": 45000
+          },
+          {
+            "id": 3,
+            "title_uz": "BOROFONE",
+            "title_ru": "BOROFONE",
+            "min_price": 25000,
+            "max_price": 215000
+          }
+        ]
+      }
+    ]
   },
   {
     "id": 2,
-    "title_uz": "Bonuslar va chegirmalar",
-    "title_ru": "Бонусы и скидки",
-    "sub_title_uz": "Har bir xaridda foyda oling. Bonus to'plang va chegirma bilan xarid qiling",
-    "sub_title_ru": "Выгода в каждой покупке. Накапливайте бонус и покупайте со скидкой",
-    "image": "https://sirius-tech.uz/media/images/d10d2662-8e49-44bb-aebb-25ce92dcfa2f.png"
+    "title_uz": "Boshqa jihozlar",
+    "title_ru": "Другие",
+    "image": "https://sirius-tech.uz/media/images/b9a03fdb-1952-4bcc-94b8-336575ec2615.jpg",
+    "is_index": true,
+    "count": 7,
+    "min_price": 60000,
+    "max_price": 620000,
+    "brands": [
+      { "id": 2, "title_uz": "apple", "title_ru": "apple" },
+      { "id": 3, "title_uz": "BOROFONE", "title_ru": "BOROFONE" },
+      { "id": 9, "title_uz": "hoco", "title_ru": "hoco" },
+      { "id": 14, "title_uz": "LDNIO", "title_ru": "LDNIO" },
+      { "id": 15, "title_uz": "recci", "title_ru": "recci" },
+      { "id": 16, "title_uz": "Bvot", "title_ru": "Bvot" },
+      { "id": 17, "title_uz": "Yesido", "title_ru": "Yesido" }
+    ],
+    "sub_categories": [
+      {
+        "id": 18,
+        "title_uz": "Adapterlar",
+        "title_ru": "Адаптеры",
+        "categories": {
+          "id": 2,
+          "title_uz": "Boshqa jihozlar",
+          "title_ru": "Другие"
+        },
+        "min_price": 260000,
+        "max_price": 270000,
+        "brands": [
+          {
+            "id": 2,
+            "title_uz": "apple",
+            "title_ru": "apple",
+            "min_price": 40000,
+            "max_price": 550000
+          }
+        ]
+      },
+      {
+        "id": 21,
+        "title_uz": "Mikrofonlar",
+        "title_ru": "Микрофоны",
+        "categories": {
+          "id": 2,
+          "title_uz": "Boshqa jihozlar",
+          "title_ru": "Другие"
+        },
+        "min_price": 215000,
+        "max_price": 215000,
+        "brands": [
+          {
+            "id": 3,
+            "title_uz": "BOROFONE",
+            "title_ru": "BOROFONE",
+            "min_price": 25000,
+            "max_price": 215000
+          }
+        ]
+      },
+      {
+        "id": 19,
+        "title_uz": "Offis uchun",
+        "title_ru": "Для офиса",
+        "categories": {
+          "id": 2,
+          "title_uz": "Boshqa jihozlar",
+          "title_ru": "Другие"
+        },
+        "min_price": 180000,
+        "max_price": 620000,
+        "brands": [
+          {
+            "id": 14,
+            "title_uz": "LDNIO",
+            "title_ru": "LDNIO",
+            "min_price": 180000,
+            "max_price": 185000
+          },
+          {
+            "id": 15,
+            "title_uz": "recci",
+            "title_ru": "recci",
+            "min_price": 280000,
+            "max_price": 400000
+          },
+          {
+            "id": 16,
+            "title_uz": "Bvot",
+            "title_ru": "Bvot",
+            "min_price": 385000,
+            "max_price": 620000
+          }
+        ]
+      },
+      {
+        "id": 23,
+        "title_uz": "Mashinalar uchun",
+        "title_ru": "Для автомобиля",
+        "categories": {
+          "id": 2,
+          "title_uz": "Boshqa jihozlar",
+          "title_ru": "Другие"
+        },
+        "min_price": 60000,
+        "max_price": 320000,
+        "brands": [
+          {
+            "id": 3,
+            "title_uz": "BOROFONE",
+            "title_ru": "BOROFONE",
+            "min_price": 25000,
+            "max_price": 215000
+          },
+          {
+            "id": 17,
+            "title_uz": "Yesido",
+            "title_ru": "Yesido",
+            "min_price": 70000,
+            "max_price": 320000
+          },
+          {
+            "id": 9,
+            "title_uz": "hoco",
+            "title_ru": "hoco",
+            "min_price": 60000,
+            "max_price": 185000
+          }
+        ]
+      }
+    ]
   }
 ]

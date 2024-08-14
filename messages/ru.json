@@ -53,6 +53,12 @@
       "page": "Контакт"
     }
   },
+  "Category": {
+    "highPrice": "Самая высокая цена",
+    "lowPrice": "Самая низкая цена",
+    "forAlphabetAZ": " По алфавиту А-Я",
+    "forAlphabetZA": "По алфавиту Я-А"
+  },
   "Header": {
     "product": "Продукты"
   },
