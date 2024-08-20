@@ -7,7 +7,6 @@ const Service = async () => {
   const data: IService[] = await fetchData(
     `${process.env.NEXT_API}/about/services/`
   );
-  console.log(data);
   return (
     <div className="grid grid-cols-2 lg:grid-cols-4 gap-5">
       {data &&
@@ -30,7 +29,6 @@ const Service = async () => {
             <p className="md:text-lg text-center">{service.sub_title_uz}</p>
           </div>
         ))}
-      <div></div>
     </div>
   );
 };

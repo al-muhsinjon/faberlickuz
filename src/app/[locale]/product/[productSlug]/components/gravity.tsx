@@ -11,7 +11,6 @@ interface Props {
 const Gravity: React.FC<Props> = ({ product }) => {
   const locale = useLocale();
   const t = useTranslations("Product");
-  console.log(product);
   return (
     <div className="flex flex-wrap gap-1 md:gap-2 items-center text-main font-rubik text-sm md:text-base">
       <Link href="/">{t("gravity.home")}</Link>

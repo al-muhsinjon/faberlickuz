@@ -5,8 +5,6 @@ import React, { useState } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 
 interface Props {
   images: IImage[];
@@ -38,32 +36,6 @@ const ProductView: React.FC<Props> = ({ images }) => {
             </div>
           ))}
         </div>
-        {/* <Swiper
-          direction={"vertical"}
-          slidesPerView={3}
-          spaceBetween={5}
-          navigation={true}
-          pagination={{ clickable: true }}
-          modules={[Navigation, Pagination]}
-          className="w-full h-[13rem]"
-        >
-          {images.map((image, index) => (
-            <SwiperSlide
-              key={index}
-              className="relative rounded-lg   overflow-hidden border"
-              onClick={() => handleThumbnailClick(image)}
-            >
-              <div className="w-16 h-16  relative">
-                <Image
-                  src={image.image}
-                  alt={`Thumbnail ${index}`}
-                  className="cursor-pointer object-cover "
-                  fill
-                />
-              </div>
-            </SwiperSlide>
-          ))}
-        </Swiper> */}
       </div>
       <div className=" w-96 h-96 overflow-hidden border relative rounded-lg">
         <Image

@@ -1,16 +1,13 @@
 import ProductView from "@/components/layouts/product-view";
 import ShortDescription from "@/components/layouts/short-description";
-import { useBasketStore } from "@/hooks/use-basket";
-import { ICartProduct, IProduct } from "@/types";
-import Link from "next/link";
-import { usePathname } from "next/navigation";
 import React from "react";
-import AddToBasket from "./add-to-basket";
-import Gravity from "./gravity";
-import Desc from "./desc";
-import Available from "./available";
-import Price from "./price";
+import AddToBasket from "./components/add-to-basket";
+import Gravity from "./components/gravity";
+import Desc from "./components/desc";
+import Available from "./components/available";
+import Price from "./components/price";
 import { fetchData } from "@/utils/fetch-data";
+import RelatedProducts from "./components/related-products";
 
 export const revalidate = 60;
 interface Props {
@@ -54,11 +51,15 @@ const Product = async ({
               </div>
             </div>
             <Desc product={product} />
+            <RelatedProducts relatedProducts={product.related_products} />
           </div>
         </div>
       ) : (
-        <div className="w-full min-h-screen flex justify-center items-start pt-32 text-3xl font-bold">
-          Maxsulot topilmadi
+        <div className="w-full min-h-screen flex justify-center items-center flex-col text-center py-32">
+          <h1 className="text-4xl font-bold">Mahsulot topilmadi</h1>{" "}
+          <p className="text-lg">
+            Iltimos, qayta urinib ko'ring yoki boshqa mahsulotga o'rganing.
+          </p>
         </div>
       )}
     </>

@@ -98,6 +98,8 @@ export interface IMainPageCategory {
   title_ru: string;
   is_index: boolean;
   image: string;
+  max_price: number;
+  min_price: number;
 }
 
 interface IImage {

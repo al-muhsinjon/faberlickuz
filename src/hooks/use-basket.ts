@@ -1,58 +1,3 @@
-// import create from "zustand";
-// import { persist } from "zustand/middleware";
-// import { ICartProduct } from "@/types";
-
-// interface BasketState {
-//   basket: ICartProduct[];
-//   allPrice: number;
-//   allCount: number;
-//   addToBasket: (product: ICartProduct) => void;
-// }
-
-// export const useBasketStore = create<BasketState>()(
-//   persist(
-//     (set) => ({
-//       basket: [],
-//       allPrice: 0,
-//       allCount: 0,
-//       addToBasket: (product) =>
-//         set((state) => {
-//           const existingProductIndex = state.basket.findIndex(
-//             (item) => item.id === product.id
-//           );
-
-//           if (existingProductIndex >= 0) {
-//             // Mahsulot savatda mavjud bo'lsa, miqdorini va narxini yangilash
-//             const updatedBasket = [...state.basket];
-//             updatedBasket[existingProductIndex].count += 1;
-//             updatedBasket[existingProductIndex].totalPrice +=
-//               product.salePrice || product.price;
-
-//             return {
-//               basket: updatedBasket,
-//               allPrice: state.allPrice + (product.salePrice || product.price),
-//               allCount: state.allCount + 1,
-//             };
-//           } else {
-//             // Yangi mahsulotni savatga qo'shish
-//             const newProduct = {
-//               ...product,
-//               count: 1,
-//               totalPrice: product.salePrice || product.price,
-//             };
-//             return {
-//               basket: [...state.basket, newProduct],
-//               allPrice: state.allPrice + (product.salePrice || product.price),
-//               allCount: state.allCount + 1,
-//             };
-//           }
-//         }),
-//     }),
-//     {
-//       name: "basket", // localStorage kaliti nomi
-//     }
-//   )
-// );
 
 import { create } from "zustand";
 import { persist } from "zustand/middleware";
@@ -65,6 +10,7 @@ interface BasketState {
   addToBasket: (product: ICartProduct) => void;
   removeFromBasket: (id: number) => void;
   updateProductCount: (id: number, count: number) => void;
+  clearBasket: () => void;
 }
 
 export const useBasketStore = create<BasketState>()(
@@ -146,9 +92,15 @@ export const useBasketStore = create<BasketState>()(
             allCount,
           };
         }),
+      clearBasket: () =>
+        set({
+          basket: [],
+          allPrice: 0,
+          allCount: 0,
+        }),
     }),
     {
-      name: "basket",
+      name: "basket", // localStorage kaliti nomi
     }
   )
 );

@@ -3,12 +3,6 @@ import AdBanner from "@/components/banners/ad-banner";
 import CatalogCards from "@/components/catalog-cards";
 import Banner from "@/components/banners";
 import NewProduct from "@/components/layouts/new-product";
-import {
-  IAdBanner,
-  IBanner,
-  ICategoryProduct,
-  IMainPageCategory,
-} from "@/types";
 import { fetchData } from "@/utils/fetch-data";
 import Service from "@/components/layouts/service";
 

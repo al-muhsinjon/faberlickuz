@@ -5,13 +5,14 @@ import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { Button, Input } from "@headlessui/react";
 import { ISearchCategoryProduct } from "@/types";
 import Link from "next/link";
-import { useLocale } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 
 const SearchComponent: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [opened, setOpened] = useState(false);
   const [product, setProduct] = useState<ISearchCategoryProduct>();
   const locale = useLocale();
+  const t = useTranslations("Search");
 
   const getSearch = async (params: string) => {
     if (!params) {
@@ -43,6 +44,8 @@ const SearchComponent: React.FC = () => {
       <div className="max-w-4xl relative">
         <div className="w-full flex">
           <Input
+            onFocus={() => setOpened(opened)}
+            onBlur={() => setOpened(false)}
             type="search"
             placeholder="Search..."
             value={searchTerm}
@@ -88,7 +91,7 @@ const SearchComponent: React.FC = () => {
                 </Link>
               ))
             ) : (
-              <div className="p-4 text-gray-700">Hech nima topilmadi</div>
+              <div className="p-4 text-gray-700">{t("empty")}</div>
             )}
           </div>
         )}

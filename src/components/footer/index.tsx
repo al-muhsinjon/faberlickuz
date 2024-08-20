@@ -3,7 +3,6 @@ import Link from "next/link";
 import { FaFacebook, FaInstagram, FaTelegramPlane } from "react-icons/fa";
 import React from "react";
 import Reserve from "./reserve";
-import { useTranslations } from "next-intl";
 
 const Footer = async ({ locale }: { locale: string }) => {
   const { data } = await axios.get(`${process.env.NEXT_API}/about/contacts/`);

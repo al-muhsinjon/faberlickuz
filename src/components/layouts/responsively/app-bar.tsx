@@ -3,7 +3,6 @@ import useCatalog from "@/hooks/use-catalog";
 import useSearch from "@/hooks/use-search";
 import { ISearchCategoryProduct } from "@/types";
 import { Button, Input } from "@headlessui/react";
-import { MagnifyingGlassIcon } from "@heroicons/react/20/solid";
 import { LayoutGrid, Search, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";

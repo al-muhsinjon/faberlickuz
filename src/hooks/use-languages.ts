@@ -1,4 +1,3 @@
-import { useLocale } from "next-intl";
 import { create } from "zustand";
 
 interface LanguageProps {

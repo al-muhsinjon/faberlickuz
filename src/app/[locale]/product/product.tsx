@@ -1,32 +1,33 @@
 "use client";
+import React, { useEffect, useState } from "react";
 import ProductCard from "@/components/product-card";
+import SkeletonCard from "@/components/product-card/skleton-card";
 import useByFilter from "@/hooks/use-by-filter";
 import { useCategoryStore } from "@/hooks/use-category";
 import { useProductStore } from "@/hooks/use-product-store";
 import { Button } from "@headlessui/react";
-import React, { useEffect, useState } from "react";
 import { BsFilterRight } from "react-icons/bs";
 import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 
 const Product = () => {
   const { query, setCategories } = useCategoryStore((state) => state);
   const { fetchProducts, products, isLoading, error } = useProductStore();
   const { isOpen, onClose, onOpen } = useByFilter();
-  const t = useTranslations("Category"); // `useTranslation` hookini import qilish
-  const [orderBy, setOrderBy] = useState(""); // `orderBy` holati uchun state
+  const t = useTranslations("Category");
+  const [orderBy, setOrderBy] = useState("");
+  const router = useRouter();
 
-  // `query` o'zgarganda mahsulotlarni yuklash
   useEffect(() => {
     if (query) {
       fetchProducts(query);
     }
   }, [query, fetchProducts]);
 
-  // `order_by` parametrini yangilash va uni `query` stringiga qo'shish
   const handleOrderByChange = (orderByValue: string, displayText: string) => {
     setCategories({ order_by: orderByValue });
-    setOrderBy(displayText); // orderBy matnini yangilash
-    onClose(); // filterni yopish
+    setOrderBy(displayText);
+    onClose();
   };
 
   return (
@@ -38,7 +39,7 @@ const Product = () => {
             className="flex items-center justify-between px-4 py-2 gap-3 rounded-[41px] border border-[#efefef]"
           >
             <p className="text-xs text-[#656565] font-medium duration-500 hover:bg-[rgba(113,169,233,.559)]">
-              {orderBy || ""} {/* Default matn yoki orderBy */}
+              {orderBy || ""}
             </p>
             <BsFilterRight />
           </Button>
@@ -81,9 +82,13 @@ const Product = () => {
         )}
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+      <div className="grid grid-cols-2 md lg sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 lg:gap-6 md:gap-6 gap-3">
         {isLoading ? (
-          <p>Loading...</p>
+          <>
+            {Array.from({ length: 8 }).map((_, index) => (
+              <SkeletonCard key={index} />
+            ))}
+          </>
         ) : error ? (
           <p>Error fetching products</p>
         ) : products?.results.length > 0 ? (
@@ -93,7 +98,25 @@ const Product = () => {
             ))}
           </>
         ) : (
-          <p>Mahsulot topilmadi</p>
+          <div className="col-span-4">
+            <div className="flex flex-col items-center justify-center h-full py-16">
+              <img
+                src="/no-products-found.gif"
+                alt={t("noProducts")}
+                className="w-48 h-48 mb-8"
+              />
+              <h2 className="text-2xl font-bold text-gray-700 mb-4">
+                {t("noProducts")}
+              </h2>
+              <p className="text-gray-500 mb-8">{t("tryDifferentSearch")}</p>
+              <Button
+                onClick={() => router.push("/")}
+                className="px-4 py-2 bg-main text-white rounded-lg hover:bg-darkMain transition duration-150"
+              >
+                {t("goHome")}
+              </Button>
+            </div>
+          </div>
         )}
       </div>
     </>

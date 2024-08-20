@@ -2,6 +2,9 @@
   "Home": {
     "new": "Yangi mahsulotlar"
   },
+  "Search": {
+    "empty": "Hech nima topilmadi"
+  },
   "Card": {
     "btns": {
       "batafsil": "Batafsil",
@@ -41,9 +44,12 @@
       "phone": "Telefon",
       "address": "Manzil",
       "aplicate": "Buyurtmani yuborish"
+    },
+    "toast": {
+      "title": "Buyurtmangiz uchun rahmat.",
+      "description": "Biz siz bilan tez orada bog'lanamiz."
     }
   },
-  "toast": "Buyurtmangiz uchun rahmat. Biz siz bilan tez orada bog'lanamiz.",
   "Contact": {
     "title": "Biz bilan bog'laning",
     "email": "Elektorn pochta",
@@ -60,7 +66,12 @@
     "highPrice": "Eng yuqori narx",
     "lowPrice": "Eng past narx",
     "forAlphabetAZ": "Alifbo bo'yicha A-Z",
-    "forAlphabetZA": "Alifbo bo'yicha Z-A"
+    "forAlphabetZA": "Alifbo bo'yicha Z-A",
+    "loading": "Yuklanmoqda...",
+    "errorFetching": "Ma'lumot olishda xatolik yuz berdi",
+    "noProducts": "Mahsulot topilmadi",
+    "tryDifferentSearch": "Boshqa qidiruv so'zini sinab ko'ring",
+    "goHome": "Bosh sahifaga qaytish"
   },
   "Footer": {
     "reserve": "2024 Faberlic, Inc. Barcha huquqlar himoyalangan."

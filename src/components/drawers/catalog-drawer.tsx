@@ -35,7 +35,7 @@ const CatalogDrawer = () => {
     fetchCategories();
   }, []);
 
-  const updateCategories = (newCategory: string, newSubCategory: string) => {
+  const updateCategories = (newCategory: string, newSubCategory?: string) => {
     setStoreCategories({
       category: newCategory,
       sub_category: newSubCategory,
@@ -55,7 +55,15 @@ const CatalogDrawer = () => {
         <div className="container overflow-hidden grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 bg-white pb-14">
           {categories.map((category) => (
             <ul className="text-main pt-0 lg:py-10" key={category.id}>
-              <h3 className="lg:text-lg font-medium pb-[10px]">
+              <h3
+                className="lg:text-lg font-medium pb-[10px] hover:underline cursor-pointer"
+                onClick={() =>
+                  updateCategories(
+                    `${category ? `&category=${category.title_uz}` : ""}`,
+                    ""
+                  )
+                }
+              >
                 {locale === "uz" ? category.title_uz : category.title_ru}
               </h3>
               <li className="relative z-50 pb-2 text-[#8A8A8A] duration-300 hover:text-darkBlue">
