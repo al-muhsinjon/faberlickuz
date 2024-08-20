@@ -9,6 +9,7 @@ import { Button } from "@headlessui/react";
 import { BsFilterRight } from "react-icons/bs";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
+import Image from "next/image";
 
 const Product = () => {
   const { query, setCategories } = useCategoryStore((state) => state);
@@ -100,7 +101,7 @@ const Product = () => {
         ) : (
           <div className="col-span-4">
             <div className="flex flex-col items-center justify-center h-full py-16">
-              <img
+              <Image
                 src="/no-products-found.gif"
                 alt={t("noProducts")}
                 className="w-48 h-48 mb-8"
