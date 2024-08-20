@@ -48,7 +48,7 @@ const Product = () => {
           <div className="bg-white absolute z-10 top-16 right-6 border rounded-md divide-y">
             <div
               onClick={() =>
-                handleOrderByChange("order_by=price", t("highPrice"))
+                handleOrderByChange("&order_by=price", t("highPrice"))
               }
               className="px-3 py-2 cursor-pointer text-xs text-[#656565] font-medium duration-500 hover:bg-[rgba(113,169,233,.559)]"
             >
@@ -56,7 +56,7 @@ const Product = () => {
             </div>
             <div
               onClick={() =>
-                handleOrderByChange("order_by=-price", t("lowPrice"))
+                handleOrderByChange("&order_by=-price", t("lowPrice"))
               }
               className="px-3 py-2 cursor-pointer text-xs text-[#656565] font-medium duration-500 hover:bg-[rgba(113,169,233,.559)]"
             >
@@ -64,7 +64,7 @@ const Product = () => {
             </div>
             <div
               onClick={() =>
-                handleOrderByChange("order_by=title_uz", t("forAlphabetAZ"))
+                handleOrderByChange("&order_by=title_uz", t("forAlphabetAZ"))
               }
               className="px-3 py-2 cursor-pointer text-xs text-[#656565] font-medium duration-500 hover:bg-[rgba(113,169,233,.559)]"
             >
@@ -72,7 +72,7 @@ const Product = () => {
             </div>
             <div
               onClick={() =>
-                handleOrderByChange("order_by=-title_uz", t("forAlphabetZA"))
+                handleOrderByChange("&order_by=-title_uz", t("forAlphabetZA"))
               }
               className="px-3 py-2 cursor-pointer text-xs text-[#656565] font-medium duration-500 hover:bg-[rgba(113,169,233,.559)]"
             >

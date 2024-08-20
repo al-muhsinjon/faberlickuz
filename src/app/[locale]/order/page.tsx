@@ -8,7 +8,7 @@ import { useState } from "react";
 import OrderForm from "./order-form";
 
 const Basket = () => {
-  const { basket, allPrice, allCount, removeFromBasket, updateProductCount } =
+  const { basket, allPrice, removeFromBasket, updateProductCount } =
     useBasketStore();
   const locale = useLocale();
   const router = useRouter();
@@ -19,9 +19,7 @@ const Basket = () => {
   const [isFormVisible, setIsFormVisible] = useState(false);
 
   const handleOrderSubmit = () => {
-    // Actions to perform after the order is submitted
     setIsFormVisible(false);
-    // Optionally clear the basket here
     // clearBasket();
   };
 
@@ -67,7 +65,7 @@ const Basket = () => {
               onClick={() => setIsFormVisible(!isFormVisible)}
               className="w-full px-6 py-3 bg-main text-white rounded-lg font-semibold shadow-md hover:bg-main/90"
             >
-              Buyurtma berish
+              {t("aplicate")}
             </button>
 
             {/* Form for user details */}

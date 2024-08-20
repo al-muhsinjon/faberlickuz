@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import ProductCard from "@/components/product-card";
-import { ICategoryProduct, IProduct, IProductC } from "@/types";
+import { IProduct } from "@/types";
 import { useTranslations } from "next-intl";
 
 interface Props {
@@ -12,7 +12,7 @@ const RelatedProducts: React.FC<Props> = ({ relatedProducts }) => {
   const t = useTranslations("Product");
 
   return (
-    <>
+    <div className="pt-12">
       <h2 className="border-b py-4 border-main text-2xl lg:text-4xl font-medium">
         {t("recommendation")}
       </h2>
@@ -21,7 +21,7 @@ const RelatedProducts: React.FC<Props> = ({ relatedProducts }) => {
           <ProductCard key={product.id} product={product} />
         ))}
       </div>
-    </>
+    </div>
   );
 };
 

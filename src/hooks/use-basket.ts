@@ -19,6 +19,7 @@ export const useBasketStore = create<BasketState>()(
       basket: [],
       allPrice: 0,
       allCount: 0,
+      
       addToBasket: (product) =>
         set((state) => {
           const existingProductIndex = state.basket.findIndex(

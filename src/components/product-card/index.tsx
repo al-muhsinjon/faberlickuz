@@ -9,6 +9,7 @@ import { useLocale } from "use-intl";
 import { useBasketStore } from "@/hooks/use-basket";
 import { useTranslations } from "next-intl";
 import toast from "react-hot-toast";
+import { useResent } from "@/hooks/use-resent";
 
 interface Props {
   product: IProduct;
@@ -18,8 +19,15 @@ const ProductCard: React.FC<Props> = ({ product }) => {
   const t = useTranslations("Card");
 
   const { addToBasket } = useBasketStore();
+  const { resentProducts, addToResent } = useResent();
   const router = useRouter();
   const locale = useLocale();
+
+  const handleAddToResent = () => {
+    addToResent(product);
+    router.push(`/${locale}/product/${product.slug}`);
+    console.table(resentProducts);
+  };
 
   const handleAddToBasket = () => {
     const cartProduct: ICartProduct = {
@@ -72,7 +80,7 @@ const ProductCard: React.FC<Props> = ({ product }) => {
           <MdAddShoppingCart size={20} />
         </Button>
         <Button
-          onClick={() => router.push(`/${locale}/product/${product.slug}`)}
+          onClick={handleAddToResent}
           className="p-2 text-main border-main hover:text-white hover:bg-main font-semibold rounded-lg border-2 transition duration-150 ease-in-out w-full"
         >
           {t("btns.batafsil")}

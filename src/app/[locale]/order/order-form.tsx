@@ -83,8 +83,6 @@ const OrderForm: React.FC<OrderFormProps> = ({
     }
   };
 
-  //   flex flex-col items-center justify-center p-6 bg-green-100 text-green-800 rounded-lg shadow-lg
-
   return (
     <>
       {thankYouVisible ? (

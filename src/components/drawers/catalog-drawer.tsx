@@ -39,6 +39,7 @@ const CatalogDrawer = () => {
     setStoreCategories({
       category: newCategory,
       sub_category: newSubCategory,
+      gender: "",
     });
     fetchProducts(newCategory + newSubCategory);
     onClose();

@@ -71,7 +71,18 @@
     "errorFetching": "Ma'lumot olishda xatolik yuz berdi",
     "noProducts": "Mahsulot topilmadi",
     "tryDifferentSearch": "Boshqa qidiruv so'zini sinab ko'ring",
-    "goHome": "Bosh sahifaga qaytish"
+    "goHome": "Bosh sahifaga qaytish",
+    "sort": {
+      "katalog": "Katalog",
+      "sub_category": "Qo'shimcha kategoriya",
+      "stock": "Aksiya",
+      "gender": "Jins bo'yicha",
+      "filtered": "Saralash"
+    }
+  },
+  "NotFoundProduct": {
+    "tilte": "Mahsulot topilmadi",
+    "description": "Siz so'ragan mahsulot yo'q. Boshqa qidiruv orqali qidirib ko'ring"
   },
   "Footer": {
     "reserve": "2024 Faberlic, Inc. Barcha huquqlar himoyalangan."

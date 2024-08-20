@@ -4,7 +4,7 @@ import { fetchData } from "@/utils/fetch-data";
 import Service from "@/components/layouts/service";
 import Gravity from "./gravity";
 
-const AboutPage = async ({ params }: { params: { locale: string } }) => {
+const AboutPage = async () => {
   const [contact, socials] = await Promise.all([
     fetchData(`${process.env.NEXT_API}/about/contacts/`),
     fetchData(`${process.env.NEXT_API}/about/socials/`),

@@ -10,7 +10,6 @@ interface Props {
 }
 
 const About: React.FC<Props> = ({ contact, socials }) => {
-  console.log(contact, socials);
   const t = useTranslations("Contact");
   return (
     <div className="grid grid-cols-1 border-b py-12 md:grid-cols-2 gap-10 items-center">

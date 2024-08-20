@@ -8,7 +8,6 @@ interface Props {
 }
 
 const Available: React.FC<Props> = ({ product }) => {
-  console.log(product?.is_available);
   const t = useTranslations("Product");
   return (
     <>
