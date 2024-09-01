@@ -54,13 +54,15 @@
     "title": "Biz bilan bog'laning",
     "email": "Elektorn pochta",
     "phone": "Telefon",
+    "address": "Manzil",
     "gravity": {
       "home": "Asosiy",
       "page": "Aloqa"
     }
   },
   "Header": {
-    "product": "Mahsulotlar"
+    "product": "Mahsulotlar",
+    "category": "Kategoriya"
   },
   "Category": {
     "highPrice": "Eng yuqori narx",

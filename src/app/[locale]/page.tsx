@@ -6,7 +6,7 @@ import NewProduct from "@/components/layouts/new-product";
 import { fetchData } from "@/utils/fetch-data";
 import Service from "@/components/layouts/service";
 
-export const revalidate = 60;
+  export const revalidate = 60;
 
 const Home: React.FC = async () => {
   const [adBanner, mainPageCategory, banner, newProduct] = await Promise.all([

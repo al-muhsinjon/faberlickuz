@@ -38,7 +38,7 @@ const AdBanner: React.FC<AdBannerProps> = ({ adBanner }) => {
           <Image
             sizes="(max-width: 768px) 100vw, (max-width: 1200px)  100vw, 80vw"
             alt="ad banner"
-            src={locale === "uz" ? banner.web_image_uz : banner.web_image_ru}
+            src={locale === "uz" ? banner?.web_image_uz : banner?.web_image_ru}
             fill
             className="object-cover"
             // priority

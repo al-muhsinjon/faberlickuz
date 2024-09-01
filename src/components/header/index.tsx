@@ -59,7 +59,7 @@ const Header = () => {
             }  rounded-lg flex gap-2`}
           >
             {isOpen ? <X /> : <LayoutGrid />}
-            Category
+            {t("category")}
           </Button>
           <SearchComponent />
           <Basket />

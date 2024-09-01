@@ -42,7 +42,7 @@ const CatalogCards: React.FC<Props> = ({ mainPageCategories }) => {
           `}
         >
           <Image
-            src={photo.image}
+            src={photo.image ? photo?.image : ""}
             decoding="async"
             style={{
               position: "absolute",

@@ -105,6 +105,8 @@ const Product = () => {
                 src="/no-products-found.gif"
                 alt={t("noProducts")}
                 className="w-48 h-48 mb-8"
+                width={192}
+                height={192}
               />
               <h2 className="text-2xl font-bold text-gray-700 mb-4">
                 {t("noProducts")}
