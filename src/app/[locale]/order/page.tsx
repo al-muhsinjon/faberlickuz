@@ -65,7 +65,7 @@ const Basket = () => {
               onClick={() => setIsFormVisible(!isFormVisible)}
               className="w-full px-6 py-3 bg-main text-white rounded-lg font-semibold shadow-md hover:bg-main/90"
             >
-              {t("aplicate")}
+              {t("Info.aplicate")}
             </button>
 
             {/* Form for user details */}
