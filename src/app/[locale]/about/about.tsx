@@ -37,7 +37,7 @@ const About: React.FC<Props> = ({ contact, socials }) => {
             </svg>
             <div className="space-y-2">
               <p className="text-sm text-main">{t("email")}</p>
-              <p className="text-base md:text-xl">{contact.email}</p>
+              <p className="text-base md:text-xl">{contact?.email}</p>
             </div>
           </div>
           <div className="flex items-center gap-[30px]">
@@ -57,11 +57,11 @@ const About: React.FC<Props> = ({ contact, socials }) => {
             </svg>
             <div className="space-y-2">
               <p className="text-sm text-main">{t("phone")}</p>
-              <p className="text-base md:text-xl">{contact.phone_1}</p>
+              <p className="text-base md:text-xl">{contact?.phone_1}</p>
             </div>
             <div className="space-y-2">
               <p className="text-sm text-main">{t("phone")}</p>
-              <p className="text-base md:text-xl">{contact.phone_2}</p>
+              <p className="text-base md:text-xl">{contact?.phone_2}</p>
             </div>
           </div>
           <div className="flex items-center gap-[30px]">
@@ -79,28 +79,36 @@ const About: React.FC<Props> = ({ contact, socials }) => {
             </svg>
             <div className="space-y-2">
               <p className="text-sm text-main">{t("address")}</p>
-              <p className="text-base md:text-xl">{contact.address_uz}</p>
+              <p className="text-base md:text-xl">{contact?.address_uz}</p>
             </div>
           </div>
         </div>
         <div className="flex gap-[30px] my-[38px] justify-center md:justify-start">
-          <Link className="text-main" href={socials.facebook}>
-            <p className="text-base md:text-xl">Facebook</p>
-          </Link>
-          <Link className="text-main" href={socials.telegram}>
-            <p className="text-base md:text-xl">Telegram</p>
-          </Link>
-          <Link className="text-main" href={socials.instagram}>
-            <p className="text-base md:text-xl">Instagram</p>
-          </Link>
+          {socials.facebook && (
+            <Link className="text-main" href={socials?.facebook}>
+              <p className="text-base md:text-xl">Facebook</p>
+            </Link>
+          )}
+          {socials.telegram && (
+            <Link className="text-main" href={socials?.telegram}>
+              <p className="text-base md:text-xl">Telegram</p>
+            </Link>
+          )}
+          {socials.instagram && (
+            <Link className="text-main" href={socials?.instagram}>
+              <p className="text-base md:text-xl">Instagram</p>
+            </Link>
+          )}
         </div>
       </div>
-      <iframe
-        loading="lazy"
-        referrerPolicy="no-referrer-when-downgrade"
-        className="w-full aspect-video lg:aspect-[10/7]"
-        src={contact.map}
-      ></iframe>
+      {contact?.map && (
+        <iframe
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          className="w-full aspect-video lg:aspect-[10/7]"
+          src={contact.map}
+        ></iframe>
+      )}
     </div>
   );
 };

@@ -3,12 +3,13 @@ import useCatalog from "@/hooks/use-catalog";
 import useSearch from "@/hooks/use-search";
 import { ISearchCategoryProduct } from "@/types";
 import { Button, Input } from "@headlessui/react";
-import { LayoutGrid, Search, X } from "lucide-react";
+import { Contact, LayoutGrid, Phone, Search, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React, { useEffect, useState } from "react";
+import { BsTelephone } from "react-icons/bs";
 
-const AppBar = () => {
+const AppBar = ({ locale }: { locale: string }) => {
   const { onOpen, onClose, isOpen } = useCatalog();
   const [searchTerm, setSearchTerm] = useState("");
   const searchOpen = useSearch();
