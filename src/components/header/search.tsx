@@ -10,13 +10,13 @@ import { useLocale, useTranslations } from "next-intl";
 const SearchComponent: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [opened, setOpened] = useState(false);
-  const [product, setProduct] = useState<ISearchCategoryProduct>();
+  const [product, setProduct] = useState<ISearchCategoryProduct | undefined>();
   const locale = useLocale();
   const t = useTranslations("Search");
 
   const getSearch = async (params: string) => {
     if (!params) {
-      // Clear results and close dropdown if input is empty
+      // Agar input bo'sh bo'lsa, natijalarni tozalab dropdownni yopish
       setProduct(undefined);
       setOpened(false);
       return;
@@ -28,15 +28,21 @@ const SearchComponent: React.FC = () => {
       );
       const data = await res.json();
       setProduct(data);
-      setOpened(true);
+      if (searchTerm) {
+        setOpened(true);
+      }
     } catch (error) {
-      console.error("Failed to fetch search results:", error);
+      console.error("Qidiruv natijalarini olishda xato yuz berdi:", error);
       setOpened(false);
     }
   };
 
   useEffect(() => {
-    getSearch(searchTerm);
+    if (searchTerm.length > 0) {
+      getSearch(searchTerm);
+    } else {
+      setOpened(false);
+    }
   }, [searchTerm]);
 
   return (
@@ -44,8 +50,8 @@ const SearchComponent: React.FC = () => {
       <div className="max-w-4xl relative">
         <div className="w-full flex">
           <Input
-            onFocus={() => setOpened(opened)}
-            onBlur={() => setOpened(false)}
+            onFocus={() => setOpened(true)}
+            onBlur={() => setTimeout(() => setOpened(false), 200)} // Foydalanuvchi mahsulotga bosishi uchun biroz vaqt berish
             type="search"
             placeholder="Search..."
             value={searchTerm}
@@ -56,27 +62,28 @@ const SearchComponent: React.FC = () => {
             <MagnifyingGlassIcon className="w-6 h-6" />
           </Button>
         </div>
-        {opened && (
-          <div className="w-full mx-auto left-0 absolute  z-10 overflow-y-auto bg-white shadow-lg max-h-60 mt-1 rounded-md">
-            {product && product.results && product.results.length > 0 ? (
+        {opened && product && (
+          <div className="w-full mx-auto left-0 absolute z-10 overflow-y-auto bg-white shadow-lg max-h-60 mt-1 rounded-md">
+            {product.results && product.results.length > 0 ? (
               product.results.map((prod) => (
                 <Link
                   href={`/uz/product/${prod.slug}`}
                   key={prod.id}
                   className="flex items-center p-2 hover:bg-gray-100 transition"
+                  passHref
                 >
                   <div className="flex-shrink-0 h-16 w-16 relative mr-3">
                     <Image
                       priority={false}
-                      src={prod.image.image}
+                      src={prod?.image.image || "/blur-image.jpg"}
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      alt={prod.image.image || "Product Image"}
+                      alt={prod?.image.image || "Product Image"}
                       fill
                       loading="lazy"
                       style={{ objectFit: "cover" }}
                       placeholder="blur"
                       blurDataURL="/blur-image.jpg"
-                      className="w-full h-full object-cover duration-200 ease-in-out scale-100 blur-0 grayscale-0"
+                      className="w-full h-full object-cover duration-200 ease-in-out"
                     />
                   </div>
                   <div className="flex flex-col">
@@ -85,7 +92,7 @@ const SearchComponent: React.FC = () => {
                     </span>
                     <span className="text-sm text-gray-500">{prod.brand}</span>
                     <span className="text-sm font-semibold text-gray-900">
-                      ${prod.price}
+                      {prod.price.toLocaleString()}
                     </span>
                   </div>
                 </Link>

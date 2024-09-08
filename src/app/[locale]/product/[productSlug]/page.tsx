@@ -306,7 +306,7 @@ interface Props {
   };
 }
 
-// export const revalidate = 60;
+export const revalidate = 60;
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = await fetchData(

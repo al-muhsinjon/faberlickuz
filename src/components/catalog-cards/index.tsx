@@ -18,9 +18,10 @@ const CatalogCards: React.FC<Props> = ({ mainPageCategories }) => {
   const updateCategories = (newCategory: IMainPageCategory) => {
     setCategories({
       brand: "",
-      category: `&category=${newCategory.title_uz}`,
+      category: `${newCategory.title_uz}`,
       sub_category: "",
       stock: "",
+      page_size: "8",
     });
     router.push(`/${locale}/product`);
   };

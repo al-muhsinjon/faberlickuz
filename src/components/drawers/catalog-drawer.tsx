@@ -40,6 +40,7 @@ const CatalogDrawer = () => {
       category: newCategory,
       sub_category: newSubCategory,
       gender: "",
+      page_size: "8",
     });
     fetchProducts(newCategory + newSubCategory);
     onClose();
@@ -72,12 +73,8 @@ const CatalogDrawer = () => {
                   <Button
                     onClick={() =>
                       updateCategories(
-                        `${category ? `&category=${category.title_uz}` : ""}`,
-                        `${
-                          sub_category
-                            ? `&sub_category=${sub_category.title_uz}`
-                            : ""
-                        }`
+                        `${category ? `${category.title_uz}` : ""}`,
+                        `${sub_category ? `${sub_category.title_uz}` : ""}`
                       )
                     }
                     className="flex text-wrap break-words group items-center justify-between text-left gap-5 max-md:text-sm whitespace-nowrap"

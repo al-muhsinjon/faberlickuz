@@ -17,12 +17,13 @@ const AdBanner: React.FC<AdBannerProps> = ({ adBanner }) => {
 
   const handleBannerClick = (banner: IAdBanner) => {
     setCategories({
-      brand: banner.brand ? `&brand=${banner.brand.title_uz}` : "",
-      category: banner.category ? `&category=${banner.category.title_uz}` : "",
+      brand: banner.brand ? `${banner.brand.title_uz}` : "",
+      category: banner.category ? `${banner.category.title_uz}` : "",
       sub_category: banner.sub_category
-        ? `&sub_category=${banner.sub_category.title_uz}`
+        ? `${banner.sub_category.title_uz}`
         : "",
-      stock: banner.stock ? `&stock=${banner.stock.stock_type}` : "",
+      stock: banner.stock ? `${banner.stock.stock_type}` : "",
+      page_size: "8",
     });
     router.push("/uz/product");
   };

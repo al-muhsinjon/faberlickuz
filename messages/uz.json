@@ -74,16 +74,18 @@
     "noProducts": "Mahsulot topilmadi",
     "tryDifferentSearch": "Boshqa qidiruv so'zini sinab ko'ring",
     "goHome": "Bosh sahifaga qaytish",
+    "loadMore": "Yana ko'rish",
     "sort": {
       "katalog": "Katalog",
       "sub_category": "Qo'shimcha kategoriya",
       "stock": "Aksiya",
       "gender": "Jins bo'yicha",
-      "filtered": "Saralash"
+      "filtered": "Saralash",
+      "clearFilters": "Saralashni tozalash"
     }
   },
   "NotFoundProduct": {
-    "tilte": "Mahsulot topilmadi",
+    "title": "Mahsulot topilmadi",
     "description": "Siz so'ragan mahsulot yo'q. Boshqa qidiruv orqali qidirib ko'ring"
   },
   "Footer": {

@@ -4,6 +4,7 @@ import { Metadata, ResolvingMetadata } from "next";
 import Head from "next/head";
 import React from "react";
 
+export const revalidate = 60;
 interface Props {
   params: {
     locale: string;
