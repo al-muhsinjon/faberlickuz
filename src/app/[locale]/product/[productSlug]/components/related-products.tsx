@@ -7,7 +7,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
-import { Navigation, Pagination } from "swiper/modules";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 interface Props {
   relatedProducts: IProduct[];
@@ -32,9 +32,9 @@ const RelatedProducts: React.FC<Props> = ({ relatedProducts }) => {
             slidesPerView: 4, // Katta ekranlarda 4 ta mahsulot
           },
         }}
-        navigation
+        autoplay={{ delay: 2500, disableOnInteraction: false }}
         pagination={{ clickable: true }}
-        modules={[Navigation]}
+        modules={[Navigation, Autoplay]}
         loop
         className="pt-6"
       >
